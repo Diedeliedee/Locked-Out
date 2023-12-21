@@ -1663,6 +1663,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92eb4f2fcc8d32e49be72e2d89cf28eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_onSolved:
+    m_PersistentCalls:
+      m_Calls: []
   m_order:
   - {fileID: 8382272662831262319}
   - {fileID: 6325721463327737281}
@@ -1675,10 +1678,7 @@ MonoBehaviour:
   m_onWrongWireCut:
     m_PersistentCalls:
       m_Calls: []
-  m_onSolved:
-    m_PersistentCalls:
-      m_Calls: []
-  m_colorScreen: {fileID: 2100000, guid: 48b4fff75cc03e84f93e26a221fbdfc4, type: 2}
+  m_colorScreen: {fileID: 8269414693919745325}
 --- !u!1 &8712505007063787834
 GameObject:
   m_ObjectHideFlags: 0
