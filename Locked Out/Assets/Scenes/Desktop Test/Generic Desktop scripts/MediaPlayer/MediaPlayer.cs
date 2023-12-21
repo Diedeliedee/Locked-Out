@@ -142,7 +142,7 @@ public class MediaPlayer : MonoBehaviour
         source.clip = songs[currentClip];
         source.Play();
         paused = false;
-        playButton.sprite = playButtonImages[0];
+        playButton.sprite = playButtonImages[1];
         musicProgress.maxValue = songs[currentClip].length;
         System.TimeSpan t = System.TimeSpan.FromSeconds(songs[currentClip].length);
         songDurration.text = t.ToString(@"hh\:mm\:ss");
