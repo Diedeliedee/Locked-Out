@@ -3994,6 +3994,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 266874320}
     m_Modifications:
+    - target: {fileID: 4362181190934197256, guid: 85f4bfd7f0f457d43967bf9a3b597cfe,
+        type: 3}
+      propertyPath: m_text
+      value: "===============================================\r\n=            CardOS
+        v1.0 - Command Prompt       =\r\n===============================================\r\n\r\n[CardOS
+        Shell - Version 1.0.0]\r\n\r\n[\u2660] Welcome to CardOS, where every command
+        is a game!\r\n\r\n[\u2666] Type 'help' to see available commands.\r\n\r\n[\u2663]
+        Aces high! Let the cards guide your way.\r\n\r\n[\\u2665] $ "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362181190934197256, guid: 85f4bfd7f0f457d43967bf9a3b597cfe,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5008119296759127909, guid: 85f4bfd7f0f457d43967bf9a3b597cfe,
         type: 3}
       propertyPath: m_Pivot.x
