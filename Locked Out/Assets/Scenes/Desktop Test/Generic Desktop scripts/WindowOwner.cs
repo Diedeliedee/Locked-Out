@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class WindowOwner : MonoBehaviour
 {
-    [SerializeField] private GameObject windowPrefab;
-    [SerializeField] private GameObject windowInstance;
+    [SerializeField] private Window windowPrefab;
+    [SerializeField] private Window windowInstance;
     [SerializeField] private Transform canvasReferance;
     [SerializeField] private bool closeOnclick = true;
+
+    private Desktop desktop;
+
+    private void Start()
+    {
+        desktop = FindObjectOfType<Desktop>();
+    }
 
 
     /// <summary>
@@ -18,11 +25,16 @@ public class WindowOwner : MonoBehaviour
         if(windowInstance != null)
         {
             if (!closeOnclick) return;
-            windowInstance.SetActive(!windowInstance.activeInHierarchy);
+            windowInstance.gameObject.SetActive(!windowInstance.gameObject.activeInHierarchy);
+            if (windowInstance.gameObject.activeInHierarchy)
+            {
+                windowInstance.OnSetFocusEvent?.Invoke(windowInstance);
+            }
         }
         else
         {
             windowInstance = Instantiate(windowPrefab, canvasReferance);
+            desktop.AddWindow(windowInstance);
         }
     }
 
