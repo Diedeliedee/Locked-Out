@@ -526,7 +526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1d6621d21052e4e9e58a8ab9c0d4ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusWindow: {fileID: 0}
   windows:
   - {fileID: 1515965339}
   - {fileID: 1044368988460635633}
