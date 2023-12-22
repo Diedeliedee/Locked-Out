@@ -50,4 +50,9 @@ public class Desktop : MonoBehaviour
         if(focusWindow != null) focusWindow.OnUnSetFocusEvent?.Invoke();
         focusWindow = window;
     }
+
+    public Window GetFocusWindow()
+    {
+        return focusWindow;
+    }
 }
