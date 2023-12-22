@@ -26,6 +26,7 @@ public class Window : MonoBehaviour, IPointerClickHandler
     /// </summary>
     public void DestroySelf()
     {
+        OnUnSetFocusEvent?.Invoke();
         OnDestory?.Invoke(this);
         //Destroy call moved to Desktop after removing it from the list because unity keeps complaining about it "disapearing"
     }
