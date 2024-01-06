@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Slot : MonoBehaviour
+public class Slot : HighlightInteractable
 {
     public UnityEvent<Slot> onSelect = null;
     [HideInInspector] public int index = 0;
@@ -11,7 +11,7 @@ public class Slot : MonoBehaviour
     public bool hasPiece => m_insertedPiece != null;
     public bool correct => hasPiece && m_insertedPiece.index == index;
 
-    private void OnMouseDown()
+    public override void OnInteract()
     {
         onSelect.Invoke(this);
     }
@@ -36,4 +36,5 @@ public class Slot : MonoBehaviour
         var piece = m_insertedPiece;
         return piece;
     }
+
 }
