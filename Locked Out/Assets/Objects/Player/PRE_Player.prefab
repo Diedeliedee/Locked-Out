@@ -75,7 +75,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 7c3151c4353017e4aa722e4a06d58680, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 6164691554262239074}
   - component: {fileID: 4812743384501468264}
   - component: {fileID: 7779362593766522463}
+  - component: {fileID: 4750012052075607782}
   m_Layer: 0
   m_Name: PRE_Player
   m_TagString: Untagged
@@ -275,3 +276,15 @@ CharacterController:
   m_SkinWidth: 0.025
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.25, z: 0}
+--- !u!114 &4750012052075607782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6667236127538025180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cbda1203349d94182698be6a02ab2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
