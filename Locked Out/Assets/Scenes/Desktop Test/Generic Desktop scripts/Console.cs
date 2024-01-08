@@ -92,7 +92,6 @@ public class Console : MonoBehaviour
             lastInput += Input.inputString;
             DisplayTextString += Input.inputString;
             DisplayText.text = DisplayTextString;
-            Debug.Log(Input.inputString);
             return;
         }
     }
@@ -150,7 +149,6 @@ public class Console : MonoBehaviour
         canType = false;
         DisplayText.text = "";
         DisplayTextString = text;
-        int i = 0;
         char[] characters = text.ToCharArray();
         foreach (char c in characters)
         {
