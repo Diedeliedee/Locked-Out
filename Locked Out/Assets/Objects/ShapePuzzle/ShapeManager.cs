@@ -9,6 +9,12 @@ public class ShapeManager : Puzzle
 
     private void Awake()
     {
+        if (m_pieces == null || m_pieces.Length == 0)
+        {
+            Debug.LogWarning("Corresponding pieces not assigned in the inspector!!!", gameObject);
+            return;
+        }
+
         //  Register corresponding select events.
         for (int i = 0; i < m_pieces.Length; i++)
         {
