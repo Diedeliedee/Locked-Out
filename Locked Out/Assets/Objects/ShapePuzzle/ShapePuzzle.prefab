@@ -195,15 +195,7 @@ MonoBehaviour:
   m_onSolved:
     m_PersistentCalls:
       m_Calls: []
-  m_pieces:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  m_pieces: []
   m_slots:
   - {fileID: 2335683762729782351}
   - {fileID: 5124880788478577702}
