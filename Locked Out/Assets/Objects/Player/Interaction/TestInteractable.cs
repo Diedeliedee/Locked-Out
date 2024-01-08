@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class TestInteractable : MonoBehaviour, IInteractable
 {
-    public void Interact()
+    public void OnEnter() { }
+
+    public void OnExit() { }
+
+    public void OnInteract()
     {
         Debug.Log("Interacteded!!!", gameObject);
     }

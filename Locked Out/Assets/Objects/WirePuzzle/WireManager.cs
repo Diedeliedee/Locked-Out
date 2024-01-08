@@ -11,7 +11,7 @@ public class WireManager : Puzzle
     [SerializeField] private UnityEvent m_onCorrectWireCut;
     [SerializeField] private UnityEvent m_onWrongWireCut;
     [Space]
-    [SerializeField] private Material m_colorScreen;
+    [SerializeField] private Renderer m_colorScreen;
  
     private LinkedList<Wire> m_remainingWires = new();
     private LinkedListNode<Wire> m_primedWire = null;
@@ -59,6 +59,6 @@ public class WireManager : Puzzle
     private void PrimeWire(LinkedListNode<Wire> _wireNode)
     {
         m_primedWire = _wireNode;
-        m_colorScreen.SetColor("_EmissionColor", _wireNode.Value.cosmeticColor);
+        m_colorScreen.material.color = _wireNode.Value.cosmeticColor;
     }
 }
