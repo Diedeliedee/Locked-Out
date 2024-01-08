@@ -873,7 +873,6 @@ GameObject:
   - component: {fileID: 7026079648073384529}
   - component: {fileID: 431758831215046440}
   - component: {fileID: 9216998640597129288}
-  - component: {fileID: 7370541621675922371}
   m_Layer: 5
   m_Name: Content (1)
   m_TagString: Untagged
@@ -938,20 +937,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7370541621675922371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4918579172089187218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a039f2627ce96474793e3621ce53719d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minSize: {x: 1, y: 1}
-  maxSize: {x: 2, y: 2}
 --- !u!1 &5643818306700701819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,6 +1122,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df409e37dcab9e45b06de1f1569ab28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnSetFocusEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUnSetFocusEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDestory:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7414108359632346328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,8 +1431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570d40afc359b0b46a2235769e13672a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentAfterDrag: {fileID: 0}
   image: {fileID: 0}
+  parentAfterDrag: {fileID: 0}
 --- !u!1 &8599764770286729446
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Wire : MonoBehaviour
+public class Wire : HighlightInteractable
 {
     [Tooltip("The color of this wire. Techical and important in determining whether the puzzle is solved.")]
     public Color color;
@@ -12,7 +12,7 @@ public class Wire : MonoBehaviour
     [Tooltip("Event called when the wire is cut. The wire manager automatically subscribes to this, so anything added here is purely cosmetic.")]
     public UnityEvent<Wire> onCut = null;
 
-    private void OnMouseDown()
+    public override void OnInteract()
     {
         onCut?.Invoke(this);
     }
