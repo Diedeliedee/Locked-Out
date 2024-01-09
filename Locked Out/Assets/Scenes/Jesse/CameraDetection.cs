@@ -53,10 +53,14 @@ public class CameraDetection : MonoBehaviour
 
     private Vector2 RandomOffset()
     {
-        var t = 2 * Mathf.PI * Random.Range(0f, 1f);
-        var u = Random.Range(0f, 1f) * Random.Range(0f, 1f);
-        var r = u > 1 ? 1 : u;
+        var offset = Vector2.zero;
 
-        return new Vector2(r * Mathf.Cos(t), r * Mathf.Sin(t));
+        for (int i = 0; i < m_accuracy; i++)
+        {
+            offset = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+            if (offset.sqrMagnitude > 1f) continue;
+            break;
+        }
+        return offset;
     }
 }
