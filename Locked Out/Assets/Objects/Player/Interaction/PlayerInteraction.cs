@@ -5,39 +5,42 @@ using UnityEngine;
 public class PlayerInteraction : MonoBehaviour
 {
     [SerializeField] private float m_interactionDistance = 3f;
+    [SerializeField] private LayerMask m_interactionLayer = default;
     [Space]
-    [SerializeField] private Transform m_raycastOrigin;
+    [SerializeField] private Toolbox m_toolbox = null;
+    [SerializeField] private Transform m_raycastOrigin = null;
 
-    private IInteractable m_cachedInteractable = null;
+    private IHoverable m_cachedInteractable = null;
 
     private void Update()
     {
         //  Check if our interaction raycast hits an interactable object. If it didn't clear the cached interactable.
-        if (!FoundInteractable(out IInteractable _interactable))
+        if (!FoundHoverable(out IHoverable _hoverable))
         {
             if (m_cachedInteractable != null)
             {
                 m_cachedInteractable.OnExit();
                 m_cachedInteractable = null;
             }
+            m_toolbox.TrySecondaryActions();
             return;
         }
 
         //  If a valid interactable is found, cache it, and call OnEnter function. 
         m_cachedInteractable?.OnExit();
-        m_cachedInteractable = _interactable;
+        m_cachedInteractable = _hoverable;
         m_cachedInteractable.OnEnter();
 
-        //  If the interaction button has been pressed
-        if (Input.GetKeyDown(KeyCode.Space)) _interactable.OnInteract();
+        //  Have the toolbox check all possible interaction types.
+        m_toolbox.CrossReference(_hoverable);
     }
 
-    private bool FoundInteractable(out IInteractable _interactable)
+    private bool FoundHoverable(out IHoverable _hoverable)
     {
-        _interactable = null;
+        _hoverable = null;
 
-        if (!Physics.Raycast(m_raycastOrigin.position, m_raycastOrigin.forward, out RaycastHit _hit, m_interactionDistance)) return false;
-        if (!_hit.transform.TryGetComponent(out _interactable)) return false;
+        if (!Physics.Raycast(m_raycastOrigin.position, m_raycastOrigin.forward, out RaycastHit _hit, m_interactionDistance, m_interactionLayer)) return false;
+        if (!_hit.transform.TryGetComponent(out _hoverable)) return false;
         return true;
     }
 }
