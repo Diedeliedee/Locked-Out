@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1488268130910011853}
   - component: {fileID: 1204495440389434105}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7855951428971700541}
   - component: {fileID: 9096368599217257375}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grabber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 1971118073514679522}
   - component: {fileID: 8711119222505126437}
   - component: {fileID: 5215769397645029760}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5339131408715853093}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 8741245575944282372}
   - component: {fileID: 5658582481564092159}
   - component: {fileID: 6452332420225029394}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2349030110612174074}
   - component: {fileID: 8490970386952258352}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Camera Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,8 +407,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6164691554262239074}
   - component: {fileID: 4812743384501468264}
+  - component: {fileID: 7759417530981463514}
   - component: {fileID: 7779362593766522463}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PRE_Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,6 +449,27 @@ MonoBehaviour:
   m_moveGrip: 15
   m_turnSpeed: 180
   m_turnGrip: 30
+  m_airGripMultiplier: 0.25
+  m_hardFallTreshold: 3
+  m_onLand:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7759417530981463514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6667236127538025180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4847445d5137834a919b41d00114e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_mask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_collider: {fileID: 7779362593766522463}
 --- !u!143 &7779362593766522463
 CharacterController:
   m_ObjectHideFlags: 0
