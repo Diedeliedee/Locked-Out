@@ -20,7 +20,11 @@ public class Toolbox
             return;
         }
 
-        //if (Input.GetKeyDown(KeyCode.C) && _hoverable is ICuttable _cuttable);
+        if (Input.GetKeyDown(KeyCode.C) && _hoverable is ICuttable _cuttable)
+        {
+            _cuttable.Cut();
+            return;
+        }
     }
 
     public void TrySecondaryActions()
