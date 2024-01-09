@@ -2,11 +2,11 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Highlighter))]
-public abstract class HighlightInteractable : MonoBehaviour, IInteractable
+public abstract class HighlightHoverable : MonoBehaviour, IHoverable
 {
     private Highlighter m_hightlighter = null;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         m_hightlighter = GetComponent<Highlighter>();
     }
@@ -20,6 +20,4 @@ public abstract class HighlightInteractable : MonoBehaviour, IInteractable
     {
         if (m_hightlighter != null) m_hightlighter.enabled = false;
     }
-
-    public abstract void OnInteract();
 }

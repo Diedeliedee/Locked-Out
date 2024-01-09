@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Slot : HighlightInteractable
+public class Slot : HighlightHoverable
 {
     public UnityEvent<Slot> onSelect = null;
     [HideInInspector] public int index = 0;
@@ -11,10 +11,13 @@ public class Slot : HighlightInteractable
     public bool hasPiece => m_insertedPiece != null;
     public bool correct => hasPiece && m_insertedPiece.index == index;
 
-    public override void OnInteract()
+    /*
+    public override bool OnInteract()
     {
         onSelect.Invoke(this);
+        return true;
     }
+    */
 
     public Piece InsertPiece(Piece _piece)
     {
