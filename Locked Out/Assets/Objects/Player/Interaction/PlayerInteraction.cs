@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerInteraction : MonoBehaviour
 {
     [SerializeField] private float m_interactionDistance = 3f;
+    [SerializeField] private LayerMask m_interactionLayer = default;
     [Space]
     [SerializeField] private Toolbox m_toolbox = null;
     [SerializeField] private Transform m_raycastOrigin = null;
@@ -21,6 +22,7 @@ public class PlayerInteraction : MonoBehaviour
                 m_cachedInteractable.OnExit();
                 m_cachedInteractable = null;
             }
+            m_toolbox.TrySecondaryActions();
             return;
         }
 
@@ -37,7 +39,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         _hoverable = null;
 
-        if (!Physics.Raycast(m_raycastOrigin.position, m_raycastOrigin.forward, out RaycastHit _hit, m_interactionDistance)) return false;
+        if (!Physics.Raycast(m_raycastOrigin.position, m_raycastOrigin.forward, out RaycastHit _hit, m_interactionDistance, m_interactionLayer)) return false;
         if (!_hit.transform.TryGetComponent(out _hoverable)) return false;
         return true;
     }

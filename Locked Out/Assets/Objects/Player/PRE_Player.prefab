@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_interactionDistance: 3
+  m_interactionLayer:
+    serializedVersion: 2
+    m_Bits: 64
   m_toolbox:
     m_grabbing: {fileID: 9096368599217257375}
   m_raycastOrigin: {fileID: 1402224568941305504}

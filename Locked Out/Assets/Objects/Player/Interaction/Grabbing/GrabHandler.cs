@@ -6,16 +6,21 @@ public class GrabHandler : MonoBehaviour
 
     private IGrabbable m_holdingItem = null;
 
-    public void Grab(IGrabbable _item)
+    public void TryGrab(IGrabbable _item)
     {
-        if (m_holdingItem != null) Release();
+        if (m_holdingItem != null) return;
 
         //  Play holding animation.
         _item.Grab(m_pivot);
+        m_holdingItem = _item;
     }
 
-    public void Release()
+    public void TryRelease()
     {
+        if (m_holdingItem == null) return;
+
+        //  Play release animation.
         m_holdingItem.Release();
+        m_holdingItem = null;
     }
 }
