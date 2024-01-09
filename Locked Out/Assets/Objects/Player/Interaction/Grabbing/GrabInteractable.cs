@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent (typeof(Rigidbody))]
 public class GrabInteractable : HighlightHoverable, IGrabbable
 {
+    public UnityEvent onGrab = null;
+
     private Transform m_defaultParent = null;
     private LayerMask m_defaultLayer = default;
 
@@ -28,6 +31,8 @@ public class GrabInteractable : HighlightHoverable, IGrabbable
         gameObject.layer = 0;
 
         m_rigidBody.isKinematic = true;
+
+        onGrab?.Invoke();
     }
 
     public void Release()

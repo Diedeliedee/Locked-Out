@@ -8,8 +8,19 @@ public class Toolbox
 
     public void CrossReference(IHoverable _hoverable)
     {
-        if (Input.GetKeyDown(KeyCode.G) && _hoverable is IGrabbable _grabbable) m_grabbing.TryGrab(_grabbable); 
-        //if (Input.GetKeyDown(KeyCode.C) && _hoverable is ICuttable _cuttable) m_grabbing.TryGrab(_grabbable);
+        if (Input.GetKeyDown(KeyCode.G) && _hoverable is ISlot _slot)
+        {
+            m_grabbing.TryInsert(_slot);
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.G) && _hoverable is IGrabbable _grabbable)
+        {
+            m_grabbing.TryGrab(_grabbable);
+            return;
+        }
+
+        //if (Input.GetKeyDown(KeyCode.C) && _hoverable is ICuttable _cuttable);
     }
 
     public void TrySecondaryActions()
