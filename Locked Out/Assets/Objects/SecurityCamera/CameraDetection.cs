@@ -46,7 +46,12 @@ public class CameraDetection : MonoBehaviour
             transform.localRotation = originalRotation;
 
             //  Return true if the player has been found.
-            if (_hit.transform.TryGetComponent(out PlayerMovement _player)) return true;
+            if (_hit.transform.TryGetComponent(out PlayerMovement _player))
+            {
+                Debug.Log("Player detected", gameObject);
+                // Time penalty here
+                return true;
+            }
         }
         return false;
     }
