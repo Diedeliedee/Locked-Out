@@ -22,6 +22,7 @@ public class Slot : HighlightHoverable, ISlot
 
         gameObject.SetActive(false);
         m_insertedPiece = _piece;
+        _piece.enablePhysicsOnRelease = true;
         _piece.gameObject.SetActive(true);
         _piece.transform.SetPositionAndRotation(transform.position, transform.rotation);
         _piece.onGrab.AddListener(ResetSlot);

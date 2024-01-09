@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent (typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody))]
 public class GrabInteractable : HighlightHoverable, IGrabbable
 {
     public UnityEvent onGrab = null;
@@ -10,6 +10,7 @@ public class GrabInteractable : HighlightHoverable, IGrabbable
     private LayerMask m_defaultLayer = default;
 
     private Rigidbody m_rigidBody = null;
+    public bool enablePhysicsOnRelease = false;
 
     protected override void Awake()
     {
@@ -30,6 +31,7 @@ public class GrabInteractable : HighlightHoverable, IGrabbable
 
         gameObject.layer = 0;
 
+        enablePhysicsOnRelease = false;
         m_rigidBody.isKinematic = true;
 
         onGrab?.Invoke();
@@ -41,6 +43,7 @@ public class GrabInteractable : HighlightHoverable, IGrabbable
 
         gameObject.layer = m_defaultLayer;
 
+        if (enablePhysicsOnRelease) return;
         m_rigidBody.isKinematic = false;
     }
 }
