@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
@@ -10,10 +8,21 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private Toolbox m_toolbox = null;
     [SerializeField] private Transform m_raycastOrigin = null;
 
+    //  Cache:
     private IHoverable m_cachedInteractable = null;
+
+    //  Reference:
+    private PlayerInputReader m_input = null;
+
+    private void Awake()
+    {
+        m_input = FindObjectOfType<PlayerInputReader>();
+    }
 
     private void Update()
     {
+        var buttonPressed = m_input.interactWasPressed;
+
         //  Check if our interaction raycast hits an interactable object. If it didn't clear the cached interactable.
         if (!FoundHoverable(out IHoverable _hoverable))
         {
@@ -22,7 +31,7 @@ public class PlayerInteraction : MonoBehaviour
                 m_cachedInteractable.OnExit();
                 m_cachedInteractable = null;
             }
-            m_toolbox.TrySecondaryActions();
+            if (buttonPressed) m_toolbox.TrySecondaryActions();
             return;
         }
 
@@ -32,7 +41,7 @@ public class PlayerInteraction : MonoBehaviour
         m_cachedInteractable.OnEnter();
 
         //  Have the toolbox check all possible interaction types.
-        m_toolbox.CrossReference(_hoverable);
+        if (buttonPressed) m_toolbox.CrossReference(_hoverable);
     }
 
     private bool FoundHoverable(out IHoverable _hoverable)

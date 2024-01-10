@@ -8,27 +8,42 @@ public class Toolbox
 
     public void CrossReference(IHoverable _hoverable)
     {
-        if (Input.GetKeyDown(KeyCode.G) && _hoverable is ISlot _slot)
+        // Quick and dirty method of discerning which type of interaction is needed for which object we're interacting with.
+
+        //  If it is a standard interactable, just interact with it.
+        if (_hoverable is IInteractable _interactable)
+        {
+            _interactable.Interact();
+            return;
+        }
+
+        //  Try placing an item we're holding in the slot if the hoverable is a slot.
+        if (_hoverable is ISlot _slot)
         {
             m_grabbing.TryInsert(_slot);
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.G) && _hoverable is IGrabbable _grabbable)
+        //  Try picking up the object if it's a grabbable.
+        if (_hoverable is IGrabbable _grabbable)
         {
             m_grabbing.TryGrab(_grabbable);
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.C) && _hoverable is ICuttable _cuttable)
+        //  Run the cut behavior if it's cuttable.
+        if (_hoverable is ICuttable _cuttable)
         {
             _cuttable.Cut();
             return;
         }
     }
 
+    /// <summary>
+    /// Function called when no hoverable is detected, but the interaction button is still pressed.
+    /// </summary>
     public void TrySecondaryActions()
     {
-        if (Input.GetKeyDown(KeyCode.G)) m_grabbing.TryRelease();
+        m_grabbing.TryRelease();
     }
 }

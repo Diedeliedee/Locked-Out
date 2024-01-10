@@ -1,7 +1,6 @@
+using Joeri.Tools.Movement;
 using UnityEngine;
 using UnityEngine.Events;
-using Joeri.Tools.Movement;
-using Unity.VisualScripting;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float m_hardFallTreshold = 3f;
     [SerializeField] private UnityEvent m_onLand;
 
+    private PlayerInputReader m_input = null;
     private CharacterController m_characterController;
     private Accel.Singular m_movementAcceleration = new();
     private Accel.Singular m_rotationAcceleration = new();
@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        m_input = FindObjectOfType<PlayerInputReader>();
         m_characterController = GetComponent<CharacterController>();
         m_verticalAcceleration = new(-9.81f, 0f, 0f);
         m_groundCheck = GetComponent<GroundCheck>();
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        var input = GetInput();
+        var input = m_input.movementInput;
         var velocity = Vector3.zero;
         var deltaTime = Time.deltaTime;
         var onGround = m_groundCheck.IsOnGround();
@@ -61,16 +62,5 @@ public class PlayerMovement : MonoBehaviour
         //  Applying variable.
         m_characterController.Move(velocity * deltaTime);
         transform.Rotate(0f, m_rotationAcceleration.velocity * deltaTime, 0f, Space.Self);
-    }
-
-    private Vector2 GetInput()
-    {
-        var input = Vector2.zero;
-
-        if (Input.GetKey(KeyCode.W)) ++input.y;
-        if (Input.GetKey(KeyCode.S)) --input.y;
-        if (Input.GetKey(KeyCode.LeftArrow)) --input.x;
-        if (Input.GetKey(KeyCode.RightArrow)) ++input.x;
-        return input;
     }
 }
