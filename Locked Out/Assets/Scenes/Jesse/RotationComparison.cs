@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RotationComparison : MonoBehaviour
+public class RotationComparison : Puzzle
 {
     [SerializeField] private Transform targetObject;
     [SerializeField] private float rotationTolerance = 10f;
@@ -10,9 +10,9 @@ public class RotationComparison : MonoBehaviour
         if (CompareRotation(transform.rotation, targetObject.rotation, rotationTolerance))
         {
             print("Rotations are similar!");
-            // Test
-            Destroy(gameObject); 
-            // Logic here
+            m_onSolved.Invoke();
+            // Uhh destroy script instance or something idk
+            Destroy(this);
         }
     }
 
