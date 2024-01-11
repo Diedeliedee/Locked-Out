@@ -316,6 +316,22 @@ public partial class @PlayerInputReceiver: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Gyro"",
+            ""id"": ""ce08e86b-0400-49ed-8d22-e1ef755b2062"",
+            ""actions"": [
+                {
+                    ""name"": ""Rotation"",
+                    ""type"": ""Value"",
+                    ""id"": ""6d411953-3d74-4e64-9af2-dfea61020121"",
+                    ""expectedControlType"": ""Quaternion"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": []
         }
     ],
     ""controlSchemes"": []
@@ -328,6 +344,9 @@ public partial class @PlayerInputReceiver: IInputActionCollection2, IDisposable
         // General
         m_General = asset.FindActionMap("General", throwIfNotFound: true);
         m_General_ToggleColorBlindMode = m_General.FindAction("ToggleColorBlindMode", throwIfNotFound: true);
+        // Gyro
+        m_Gyro = asset.FindActionMap("Gyro", throwIfNotFound: true);
+        m_Gyro_Rotation = m_Gyro.FindAction("Rotation", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -493,6 +512,52 @@ public partial class @PlayerInputReceiver: IInputActionCollection2, IDisposable
         }
     }
     public GeneralActions @General => new GeneralActions(this);
+
+    // Gyro
+    private readonly InputActionMap m_Gyro;
+    private List<IGyroActions> m_GyroActionsCallbackInterfaces = new List<IGyroActions>();
+    private readonly InputAction m_Gyro_Rotation;
+    public struct GyroActions
+    {
+        private @PlayerInputReceiver m_Wrapper;
+        public GyroActions(@PlayerInputReceiver wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Rotation => m_Wrapper.m_Gyro_Rotation;
+        public InputActionMap Get() { return m_Wrapper.m_Gyro; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(GyroActions set) { return set.Get(); }
+        public void AddCallbacks(IGyroActions instance)
+        {
+            if (instance == null || m_Wrapper.m_GyroActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_GyroActionsCallbackInterfaces.Add(instance);
+            @Rotation.started += instance.OnRotation;
+            @Rotation.performed += instance.OnRotation;
+            @Rotation.canceled += instance.OnRotation;
+        }
+
+        private void UnregisterCallbacks(IGyroActions instance)
+        {
+            @Rotation.started -= instance.OnRotation;
+            @Rotation.performed -= instance.OnRotation;
+            @Rotation.canceled -= instance.OnRotation;
+        }
+
+        public void RemoveCallbacks(IGyroActions instance)
+        {
+            if (m_Wrapper.m_GyroActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IGyroActions instance)
+        {
+            foreach (var item in m_Wrapper.m_GyroActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_GyroActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public GyroActions @Gyro => new GyroActions(this);
     public interface IDroneControlsActions
     {
         void OnMovement(InputAction.CallbackContext context);
@@ -502,5 +567,9 @@ public partial class @PlayerInputReceiver: IInputActionCollection2, IDisposable
     public interface IGeneralActions
     {
         void OnToggleColorBlindMode(InputAction.CallbackContext context);
+    }
+    public interface IGyroActions
+    {
+        void OnRotation(InputAction.CallbackContext context);
     }
 }

@@ -294,6 +294,22 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Gyro",
+            "id": "ce08e86b-0400-49ed-8d22-e1ef755b2062",
+            "actions": [
+                {
+                    "name": "Rotation",
+                    "type": "Value",
+                    "id": "6d411953-3d74-4e64-9af2-dfea61020121",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": []
         }
     ],
     "controlSchemes": []
