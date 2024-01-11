@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62d6a049d5b54b42a5e2ac1a200d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  password: 
+  password: magic
   lastInput: 
   DisplayText: {fileID: 4362181190934197256}
   completed:
