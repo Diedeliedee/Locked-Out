@@ -28,7 +28,7 @@ public class WindowOwner : MonoBehaviour
             windowInstance.gameObject.SetActive(!windowInstance.gameObject.activeInHierarchy);
             if (windowInstance.gameObject.activeInHierarchy)
             {
-                windowInstance.OnSetFocusEvent?.Invoke(windowInstance);
+                windowInstance.onSetFocusEvent?.Invoke(windowInstance);
             }
         }
         else
