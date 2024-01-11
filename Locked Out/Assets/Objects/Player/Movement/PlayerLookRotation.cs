@@ -8,6 +8,13 @@ public class PlayerLookRotation : MonoBehaviour
     private float m_pitch = 0f;
     private float m_maxOffset = 0f;
 
+    private PlayerInputReader m_input = null;
+
+    private void Awake()
+    {
+        m_input = FindObjectOfType<PlayerInputReader>();
+    }
+
     private void Start()
     {
         m_maxOffset = m_range / 2f;
@@ -15,12 +22,7 @@ public class PlayerLookRotation : MonoBehaviour
 
     private void Update()
     {
-        var input = 0f;
-
-        if (Input.GetKey(KeyCode.UpArrow)) ++input;
-        if (Input.GetKey(KeyCode.DownArrow)) --input;
-
-        m_pitch += input * m_speed * Time.deltaTime;
+        m_pitch += m_input.pitchInput * m_speed * Time.deltaTime;
         m_pitch = Mathf.Clamp(m_pitch, -m_maxOffset, m_maxOffset);
         transform.localEulerAngles = new Vector3(-m_pitch, 0f, 0f);
     }

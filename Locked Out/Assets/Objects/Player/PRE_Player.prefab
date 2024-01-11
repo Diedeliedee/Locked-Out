@@ -50,6 +50,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   m_toolbox:
+    m_input: {fileID: 565657021083418606}
     m_grabbing: {fileID: 9096368599217257375}
   m_raycastOrigin: {fileID: 1402224568941305504}
 --- !u!1 &949151446052490396
@@ -406,6 +407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6164691554262239074}
+  - component: {fileID: 565657021083418606}
   - component: {fileID: 4812743384501468264}
   - component: {fileID: 7759417530981463514}
   - component: {fileID: 7779362593766522463}
@@ -433,6 +435,18 @@ Transform:
   - {fileID: 1488268130910011853}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &565657021083418606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6667236127538025180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7716b51919ff83b48a0641e4ab000a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4812743384501468264
 MonoBehaviour:
   m_ObjectHideFlags: 0
