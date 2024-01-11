@@ -1,39 +1,46 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
+using UnityEngine;
 
 public class Desktop : MonoBehaviour
 {
-    Window focusWindow;
+    private List<Window> m_windows = null;
+    private Window m_focussedWindow = null;
 
-    [SerializeField] private List<Window> windows;
+    public Window focussedWindow => m_focussedWindow;
 
     private void Start()
     {
-        foreach(Window w in windows)
+        m_windows = GetComponentsInChildren<Window>().ToList();
+        foreach (Window w in m_windows)
         {
-            w.OnSetFocusEvent.AddListener(SetFocusWindow);
-            w.OnDestory.AddListener(RemoveWindow);
+            w.onSetFocusEvent.AddListener(SetFocusWindow);
+            w.onDestroy.AddListener(RemoveWindow);
         }
         Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void AddWindow(Window window)
     {
-        windows.Add(window);
-        window.OnSetFocusEvent.AddListener(SetFocusWindow);
-        window.OnDestory.AddListener(RemoveWindow);
+        m_windows.Add(window);
+        window.onSetFocusEvent.AddListener(SetFocusWindow);
+        window.onDestroy.AddListener(RemoveWindow);
         //set the focus window to be the new window
-        window.OnSetFocusEvent?.Invoke(window);
+        window.onSetFocusEvent?.Invoke(window);
     }
 
     public void RemoveWindow(Window window)
     {
-        windows.Remove(window);
-        window.OnSetFocusEvent.RemoveListener(SetFocusWindow);
-        window.OnDestory.RemoveListener(RemoveWindow);
+        m_windows.Remove(window);
+        window.onSetFocusEvent.RemoveListener(SetFocusWindow);
+        window.onDestroy.RemoveListener(RemoveWindow);
         Destroy(window.gameObject);
+    }
+
+    public void SetFocusWindow(Window window)
+    {
+        if (m_focussedWindow != null) m_focussedWindow.onDefocus?.Invoke();
+        m_focussedWindow = window;
     }
 
     /// <summary>
@@ -41,18 +48,7 @@ public class Desktop : MonoBehaviour
     /// </summary>
     private void RevalidateList()
     {
-        windows = windows.Where(x => x != null).ToList();
+        m_windows = m_windows.Where(x => x != null).ToList();
     }
 
-
-    public void SetFocusWindow(Window window)
-    {
-        if(focusWindow != null) focusWindow.OnUnSetFocusEvent?.Invoke();
-        focusWindow = window;
-    }
-
-    public Window GetFocusWindow()
-    {
-        return focusWindow;
-    }
 }
