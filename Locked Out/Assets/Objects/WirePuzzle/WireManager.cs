@@ -110,17 +110,6 @@ public class WireManager : Puzzle
                         return;
                     }
                 }
-                //Otherwise, cut the fourth wire when the screen is yellow and the last wire when it's red.
-                if(m_colorScreen.material.color == m_screenColors[1])
-                {
-                    m_nextWire = _wires[3];
-                    return;
-                }
-                if (m_colorScreen.material.color == m_screenColors[3])
-                {
-                    m_nextWire = _wires[5];
-                    return;
-                }
                 //Otherwise, If there are no green wires and the screen is not yellow, cut the fifth wire.
                 if (m_colorScreen.material.color != m_screenColors[1])
                 {
