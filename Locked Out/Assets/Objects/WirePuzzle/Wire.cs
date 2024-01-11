@@ -7,7 +7,7 @@ public class Wire : HighlightHoverable, ICuttable
 {
     [Tooltip("The color of this wire. Techical and important in determining whether the puzzle is solved.")]
     public WireColor color;
-    [Tooltip("Event called when the wire is cut. The wire manager automatically subscribes to this, so anything added here is purely cosmetic.")]
+    [Tooltip("Event called when the wire iscut. The wire manager automatically subscribes to this, so anything added here is purely cosmetic.")]
     public UnityEvent<Wire> onCut = null;
 
     public void Cut()
