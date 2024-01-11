@@ -6,9 +6,7 @@ using UnityEngine.Events;
 public class Wire : HighlightHoverable, ICuttable
 {
     [Tooltip("The color of this wire. Techical and important in determining whether the puzzle is solved.")]
-    public Color color;
-    [Tooltip("The cosmetic color of this wire. Determines which color the screen turns into.")]
-    public UnityEngine.Color cosmeticColor;
+    public WireColor color;
     [Tooltip("Event called when the wire is cut. The wire manager automatically subscribes to this, so anything added here is purely cosmetic.")]
     public UnityEvent<Wire> onCut = null;
 
@@ -16,14 +14,13 @@ public class Wire : HighlightHoverable, ICuttable
     {
         onCut?.Invoke(this);
     }
+}
 
-    //  Enum for comparing or registering wire colors. Can be altered later down development.
-    public enum Color
-    {
-        Red,
-        Green,
-        Pink,
-        Blue,
-        Yellow
-    }
+//  Enum for comparing or registering wire colors. Can be altered later down development.
+public enum WireColor
+{
+    Red,
+    Green,
+    Blue,
+    Yellow,
 }

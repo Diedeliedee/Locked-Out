@@ -2662,6 +2662,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_colorScreen: {fileID: 8269414693919745325}
+  m_screenColors:
+  - {r: 0, g: 0.073209524, b: 1, a: 0}
+  - {r: 1, g: 0.74682754, b: 0, a: 0}
+  - {r: 0.4590993, g: 0, b: 1, a: 0}
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0, g: 1, b: 0.031594753, a: 0}
 --- !u!1 &7644261486201592978
 GameObject:
   m_ObjectHideFlags: 0
