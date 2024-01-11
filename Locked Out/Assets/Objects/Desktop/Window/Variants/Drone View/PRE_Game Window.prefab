@@ -114,6 +114,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PRE_Game Window
       objectReference: {fileID: 0}
+    - target: {fileID: 7522485956209553239, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Hide
+      objectReference: {fileID: 0}
     - target: {fileID: 8544015124465966882, guid: 30a38c85c601bdb4aa405073f67246e4,
         type: 3}
       propertyPath: m_IsActive
