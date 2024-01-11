@@ -115,6 +115,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
+        type: 3}
+      propertyPath: m_text
+      value: Serena Spade
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 20.65
+      objectReference: {fileID: 0}
     - target: {fileID: 7389737174958027554, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
       propertyPath: m_IsActive
@@ -209,6 +219,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
+        type: 3}
+      propertyPath: m_text
+      value: Helena Hearts
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 20.65
+      objectReference: {fileID: 0}
     - target: {fileID: 7389737174958027554, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
       propertyPath: m_IsActive
@@ -292,6 +312,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
+        type: 3}
+      propertyPath: m_text
+      value: Jerek Diamonds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 18.2
       objectReference: {fileID: 0}
     - target: {fileID: 7455366928570675238, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
@@ -387,6 +417,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
+        type: 3}
+      propertyPath: m_text
+      value: Jasper Wild
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 25.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7455366928570675238, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
       propertyPath: m_Name
@@ -460,6 +500,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
+        type: 3}
+      propertyPath: m_text
+      value: Jackson Clubs
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 20.3
       objectReference: {fileID: 0}
     - target: {fileID: 7455366928570675238, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
@@ -564,6 +614,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
+        type: 3}
+      propertyPath: m_text
+      value: Conrad Clubs
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 21.6
       objectReference: {fileID: 0}
     - target: {fileID: 7389737174958027554, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
