@@ -303,6 +303,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
         type: 3}
+      propertyPath: m_onFocus.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
+      propertyPath: m_onDefocus.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
       propertyPath: OnSetFocusEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -313,6 +323,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
         type: 3}
+      propertyPath: m_onFocus.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
+      propertyPath: m_onDefocus.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
+      propertyPath: m_onFocus.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4456280073973005692}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
+      propertyPath: m_onDefocus.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4456280073973005692}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
+      propertyPath: m_onFocus.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
+      propertyPath: m_onFocus.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSetFocus
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
+      propertyPath: m_onDefocus.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
       propertyPath: OnSetFocusEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4456280073973005692}
@@ -320,6 +365,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnUnSetFocusEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
+      propertyPath: m_onDefocus.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnUnSetFocus
       objectReference: {fileID: 0}
     - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
         type: 3}
@@ -348,6 +398,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
         type: 3}
+      propertyPath: m_onFocus.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TextFile, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
+      propertyPath: m_onDefocus.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TextFile, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
+      propertyPath: m_onFocus.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 3873332332975651057}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
       propertyPath: OnSetFocusEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: TextFile, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -355,6 +420,16 @@ PrefabInstance:
         type: 3}
       propertyPath: OnUnSetFocusEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: TextFile, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
+      propertyPath: m_onFocus.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Window, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+        type: 3}
+      propertyPath: m_onDefocus.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
         type: 3}
@@ -369,7 +444,7 @@ PrefabInstance:
     - target: {fileID: 7027017263285970044, guid: 30a38c85c601bdb4aa405073f67246e4,
         type: 3}
       propertyPath: m_Name
-      value: TextFile
+      value: PRE_Text File Viewer
       objectReference: {fileID: 0}
     - target: {fileID: 7522485956209553239, guid: 30a38c85c601bdb4aa405073f67246e4,
         type: 3}
@@ -396,3 +471,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 8872682760620899039}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3873332332975651057 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5684333047672341038, guid: 30a38c85c601bdb4aa405073f67246e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 8872682760620899039}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df409e37dcab9e45b06de1f1569ab28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
