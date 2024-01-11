@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class WireManager : Puzzle
 {
@@ -14,6 +15,10 @@ public class WireManager : Puzzle
     [SerializeField] private Renderer m_colorScreen;
     [Space]
     [SerializeField] private Color[] m_screenColors;
+    [Space]
+    [SerializeField] private TextMeshProUGUI m_colorBlindText;
+
+    [SerializeField] private string[] m_colorBlindColorString;
 
     private Wire m_nextWire = null;
 
@@ -75,15 +80,19 @@ public class WireManager : Puzzle
                 {
                     case 0:
                         m_colorScreen.material.color = m_screenColors[0];
+                        m_colorBlindText.text = m_colorBlindColorString[0];
                         break;
                     case 1:
                         m_colorScreen.material.color = m_screenColors[1];
+                        m_colorBlindText.text = m_colorBlindColorString[1];
                         break;
                     case 2:
                         m_colorScreen.material.color = m_screenColors[2];
+                        m_colorBlindText.text = m_colorBlindColorString[2];
                         break;
                     case 3:
                         m_colorScreen.material.color = m_screenColors[3];
+                        m_colorBlindText.text = m_colorBlindColorString[3];
                         break;
                 }
                 //If there are no yellow wires and the screen is purple, cut the third wire.
@@ -121,6 +130,7 @@ public class WireManager : Puzzle
                 }
                 //Otherwise, cut the first wire when the screen is blue.
                 m_colorScreen.material.color = m_screenColors[0];
+                m_colorBlindText.text = m_colorBlindColorString[0];
                 m_nextWire = _wires[0];
                 break;
             case 5:
@@ -128,15 +138,19 @@ public class WireManager : Puzzle
                 {
                     case 0:
                         m_colorScreen.material.color = m_screenColors[0];
+                        m_colorBlindText.text = m_colorBlindColorString[0];
                         break;
                     case 1:
                         m_colorScreen.material.color = m_screenColors[3];
+                        m_colorBlindText.text = m_colorBlindColorString[3];
                         break;
                     case 2:
                         m_colorScreen.material.color = m_screenColors[2];
+                        m_colorBlindText.text = m_colorBlindColorString[2];
                         break;
                     case 3:
                         m_colorScreen.material.color = m_screenColors[4];
+                        m_colorBlindText.text = m_colorBlindColorString[4];
                         break;
                 }
                 //If the last wire is green and the screen is purple, cut the fourth wire.
@@ -165,9 +179,11 @@ public class WireManager : Puzzle
                 {
                     case 0:
                         m_colorScreen.material.color = m_screenColors[0];
+                        m_colorBlindText.text = m_colorBlindColorString[0];
                         break;
                     case 1:
                         m_colorScreen.material.color = m_screenColors[4];
+                        m_colorBlindText.text = m_colorBlindColorString[4];
                         break;
                 }
                 //If there is more than one red wire and the screen is green, cut the last red wire.
@@ -200,9 +216,11 @@ public class WireManager : Puzzle
                 {
                     case 0:
                         m_colorScreen.material.color = m_screenColors[0];
+                        m_colorBlindText.text = m_colorBlindColorString[0];
                         break;
                     case 1:
                         m_colorScreen.material.color = m_screenColors[3];
+                        m_colorBlindText.text = m_colorBlindColorString[3];
                         break;
                 }
                 //If there are no red wires and the screen is blue, cut the second wire.
@@ -237,9 +255,11 @@ public class WireManager : Puzzle
                 {
                     case 0:
                         m_colorScreen.material.color = m_screenColors[4];
+                        m_colorBlindText.text = m_colorBlindColorString[4];
                         break;
                     case 1:
                         m_colorScreen.material.color = m_screenColors[3];
+                        m_colorBlindText.text = m_colorBlindColorString[3];
                         break;
                 }
                 if (m_colorScreen.material.color == m_screenColors[4])
@@ -258,21 +278,26 @@ public class WireManager : Puzzle
                 {
                     m_nextWire = _wires[1];
                     m_colorScreen.material.color = m_screenColors[0];
+                    m_colorBlindText.text = m_colorBlindColorString[0];
                     return;
                 }
                 switch (UnityEngine.Random.Range(0, 4))
                 {
                     case 0:
                         m_colorScreen.material.color = m_screenColors[0];
+                        m_colorBlindText.text = m_colorBlindColorString[0];
                         break;
                     case 1:
                         m_colorScreen.material.color = m_screenColors[3];
+                        m_colorBlindText.text = m_colorBlindColorString[3];
                         break;
                     case 2:
                         m_colorScreen.material.color = m_screenColors[2];
+                        m_colorBlindText.text = m_colorBlindColorString[2];
                         break;
                     case 3:
                         m_colorScreen.material.color = m_screenColors[4];
+                        m_colorBlindText.text = m_colorBlindColorString[4];
                         break;
                 }
                 //Otherwise, if the screen is red, cut the first wire.
@@ -314,6 +339,7 @@ public class WireManager : Puzzle
             default:
                 //Cut the last wire.
                 m_colorScreen.material.color = Color.black;
+                m_colorBlindText.text = "";
                 if (_wires.Count > 0)
                 {
                     m_nextWire = _wires[0];

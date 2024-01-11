@@ -1,5 +1,5 @@
 {
-    "name": "Player Actions",
+    "name": "PlayerActions",
     "maps": [
         {
             "name": "DroneControls",
@@ -262,6 +262,34 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "General",
+            "id": "d159fd00-11e7-41d0-80fe-2d984e2b0da8",
+            "actions": [
+                {
+                    "name": "ToggleColorBlindMode",
+                    "type": "Button",
+                    "id": "a4a44b10-1150-4f4e-9797-590a875cb61d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "166d8def-d276-4e37-8c0f-29a88bbe7908",
+                    "path": "<Keyboard>/f12",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleColorBlindMode",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

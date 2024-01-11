@@ -288,6 +288,34 @@ public partial class @PlayerInputReceiver: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""General"",
+            ""id"": ""d159fd00-11e7-41d0-80fe-2d984e2b0da8"",
+            ""actions"": [
+                {
+                    ""name"": ""ToggleColorBlindMode"",
+                    ""type"": ""Button"",
+                    ""id"": ""a4a44b10-1150-4f4e-9797-590a875cb61d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""166d8def-d276-4e37-8c0f-29a88bbe7908"",
+                    ""path"": ""<Keyboard>/f12"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleColorBlindMode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -297,6 +325,9 @@ public partial class @PlayerInputReceiver: IInputActionCollection2, IDisposable
         m_DroneControls_Movement = m_DroneControls.FindAction("Movement", throwIfNotFound: true);
         m_DroneControls_Rotation = m_DroneControls.FindAction("Rotation", throwIfNotFound: true);
         m_DroneControls_Interact = m_DroneControls.FindAction("Interact", throwIfNotFound: true);
+        // General
+        m_General = asset.FindActionMap("General", throwIfNotFound: true);
+        m_General_ToggleColorBlindMode = m_General.FindAction("ToggleColorBlindMode", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -416,10 +447,60 @@ public partial class @PlayerInputReceiver: IInputActionCollection2, IDisposable
         }
     }
     public DroneControlsActions @DroneControls => new DroneControlsActions(this);
+
+    // General
+    private readonly InputActionMap m_General;
+    private List<IGeneralActions> m_GeneralActionsCallbackInterfaces = new List<IGeneralActions>();
+    private readonly InputAction m_General_ToggleColorBlindMode;
+    public struct GeneralActions
+    {
+        private @PlayerInputReceiver m_Wrapper;
+        public GeneralActions(@PlayerInputReceiver wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ToggleColorBlindMode => m_Wrapper.m_General_ToggleColorBlindMode;
+        public InputActionMap Get() { return m_Wrapper.m_General; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(GeneralActions set) { return set.Get(); }
+        public void AddCallbacks(IGeneralActions instance)
+        {
+            if (instance == null || m_Wrapper.m_GeneralActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_GeneralActionsCallbackInterfaces.Add(instance);
+            @ToggleColorBlindMode.started += instance.OnToggleColorBlindMode;
+            @ToggleColorBlindMode.performed += instance.OnToggleColorBlindMode;
+            @ToggleColorBlindMode.canceled += instance.OnToggleColorBlindMode;
+        }
+
+        private void UnregisterCallbacks(IGeneralActions instance)
+        {
+            @ToggleColorBlindMode.started -= instance.OnToggleColorBlindMode;
+            @ToggleColorBlindMode.performed -= instance.OnToggleColorBlindMode;
+            @ToggleColorBlindMode.canceled -= instance.OnToggleColorBlindMode;
+        }
+
+        public void RemoveCallbacks(IGeneralActions instance)
+        {
+            if (m_Wrapper.m_GeneralActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IGeneralActions instance)
+        {
+            foreach (var item in m_Wrapper.m_GeneralActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_GeneralActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public GeneralActions @General => new GeneralActions(this);
     public interface IDroneControlsActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnRotation(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+    }
+    public interface IGeneralActions
+    {
+        void OnToggleColorBlindMode(InputAction.CallbackContext context);
     }
 }
