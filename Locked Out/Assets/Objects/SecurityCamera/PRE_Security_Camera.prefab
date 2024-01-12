@@ -290,6 +290,7 @@ MonoBehaviour:
   maxDegrees: 15
   duration: 3
   pivot: {fileID: 7036188253269762225}
+  m_detection: {fileID: 8678191193441767117}
 --- !u!4 &7036188253269762225 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2021178655527167927, guid: 0f40b4a301b42774e96f9aea8dbe5108,

@@ -35,12 +35,17 @@ public class RotationCube : HighlightHoverable, IGrabbable
         m_grabbed = false;
     }
 
-
     private void Awake()
     {
+        if (JoyconManager.Instance == null)
+        {
+            Debug.LogError("No Joycon Manager found in scene.. JESSEEEEEEEEE!111");
+            return;
+        }
+
         //  Get the public Joycon array attached to the JoyconManager in scene
         joycons = JoyconManager.Instance.j;
-        if (joycons.Count < jc_ind + 1)
+        if (joycons == null || joycons.Count < jc_ind + 1)
         {
             Debug.LogWarning("No joycons found! JESSEEE NO JOYCONS FOUUUNDD!!11");
         }

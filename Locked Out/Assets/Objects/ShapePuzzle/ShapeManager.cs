@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ShapeManager : Puzzle
 {
+    [SerializeField] private UnityEvent m_onGuessedWrong = null;
+    [Space]
     [SerializeField] private Piece[] m_pieces;
     [SerializeField] private Slot[] m_slots;
 
@@ -32,14 +35,16 @@ public class ShapeManager : Puzzle
         {
             //  If not every slot has a piece, return.
             if (!m_slots[i].hasPiece) return;
+
             //  If all slots are filled, but it is incorrect, call the mistake event.
             if (!m_slots[i].isCorrect)
             {
-                //  Mistake.
+                m_onGuessedWrong.Invoke();
                 return;
             }
         }
 
+        //  Otherwise, the puzzle is solved.
         m_onSolved.Invoke();
         for (int i = 0; i < m_slots.Length; i++) m_slots[i].onPlace.RemoveListener(OnPieceInserted);
     }

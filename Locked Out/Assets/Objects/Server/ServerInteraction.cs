@@ -1,22 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class ServerInteraction : HighlightHoverable
+public class ServerInteraction : HighlightHoverable, IInteractable
 {
-    [SerializeField] private bool correctServer;
+    [SerializeField] private UnityEvent m_onInteract = null;
 
-    public void Hack()
+    public void Interact()
     {
-        if (correctServer)
-        {
-            Debug.Log("Hacked correct server", gameObject);
-            // Get clue text file
-        }
-        else
-        {
-            Debug.Log("Hacked incorrect server", gameObject);
-            // Get time penalty
-        }
+        m_onInteract.Invoke();
     }
 }

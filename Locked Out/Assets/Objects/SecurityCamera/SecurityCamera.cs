@@ -16,7 +16,7 @@ public class SecurityCamera : MonoBehaviour
         m_routine = StartCoroutine(Rotation(maxDegrees));
     }
 
-    private void OnDisable()
+    public void Disable()
     {
         m_detection.gameObject.SetActive(false);
         StopCoroutine(m_routine);
