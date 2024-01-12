@@ -51,8 +51,7 @@ public class Window : MonoBehaviour
 
     public void OnWindowClick(PointerEventData _eventData)
     {
-        transform.SetAsLastSibling();
-        m_onFocus.Invoke(this);
+        Focus();
     }
 
     /// <summary>
@@ -61,5 +60,11 @@ public class Window : MonoBehaviour
     public void MoveTo(Vector2 _screenPosition)
     {
         m_RectTransform.anchoredPosition = _screenPosition;
+    }
+
+    public void Focus()
+    {
+        transform.SetAsLastSibling();
+        m_onFocus.Invoke(this);
     }
 }
