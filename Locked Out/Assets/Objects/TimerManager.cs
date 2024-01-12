@@ -24,13 +24,13 @@ public class TimerManager : MonoBehaviour
         if (m_state != State.Running) return;
 
         m_secondsLeft -= Time.deltaTime;
-        m_onTimeUpdated.Invoke(m_secondsLeft);
         if (m_secondsLeft <= 0f)
         {
             m_secondsLeft = 0f;
             m_state = State.Lost;
             m_onGameLost.Invoke();
         }
+        m_onTimeUpdated.Invoke(m_secondsLeft);
     }
 
     public void CallWinState()

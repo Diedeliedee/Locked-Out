@@ -5000,6 +5000,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9113158877003288606, guid: 5b6760525bc17c945a0f83de6a3745ed,
+        type: 3}
+      propertyPath: m_AllowXRRendering
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9834,8 +9839,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8276558692764755628, guid: 5d47df79e71d5874fb5a438f83c04678,
         type: 3}
+      propertyPath: m_LocalScale.y
+      value: 47.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276558692764755628, guid: 5d47df79e71d5874fb5a438f83c04678,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8270001
+      value: 1.8261
       objectReference: {fileID: 0}
     - target: {fileID: 8276558692764755628, guid: 5d47df79e71d5874fb5a438f83c04678,
         type: 3}
@@ -9845,7 +9855,7 @@ PrefabInstance:
     - target: {fileID: 8276558692764755628, guid: 5d47df79e71d5874fb5a438f83c04678,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5717659
+      value: 1.5718
       objectReference: {fileID: 0}
     - target: {fileID: 8276558692764755628, guid: 5d47df79e71d5874fb5a438f83c04678,
         type: 3}
@@ -10889,8 +10899,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8276558692764755628, guid: 5d47df79e71d5874fb5a438f83c04678,
         type: 3}
+      propertyPath: m_LocalScale.y
+      value: 43.503998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276558692764755628, guid: 5d47df79e71d5874fb5a438f83c04678,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.8259997
+      value: 2.8255
       objectReference: {fileID: 0}
     - target: {fileID: 8276558692764755628, guid: 5d47df79e71d5874fb5a438f83c04678,
         type: 3}
@@ -14508,6 +14523,7 @@ GameObject:
   - component: {fileID: 1040595151}
   - component: {fileID: 1040595153}
   - component: {fileID: 1040595152}
+  - component: {fileID: 1040595154}
   m_Layer: 0
   m_Name: SM_meeting_room_door (1)
   m_TagString: Untagged
@@ -14582,6 +14598,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040595150}
   m_Mesh: {fileID: -1358265283800160128, guid: cd75c73a07f98f94dbf36e4e38f59c97, type: 3}
+--- !u!65 &1040595154
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040595150}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0009885782, y: 0.012015402, z: 0.023529686}
+  m_Center: {x: 2.61935e-10, y: -0.006007746, z: 0.011764843}
 --- !u!4 &1048501857 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7b18d3b1f5edafa4a8b324dc06e4dcd8,
@@ -65214,6 +65251,7 @@ GameObject:
   - component: {fileID: 4046438846934160584}
   - component: {fileID: 59256647812205981}
   - component: {fileID: 775767582620914504}
+  - component: {fileID: 8842197947640451025}
   m_Layer: 0
   m_Name: SM_meeting_room_door
   m_TagString: Untagged
@@ -65221,6 +65259,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8842197947640451025
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8842197947640451024}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0009885787, y: 0.012015412, z: 0.023529693}
+  m_Center: {x: -0.0000000043946775, y: -0.0060076984, z: 0.011764847}
 --- !u!64 &8856182716732136577
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65622,6 +65681,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 12954755934946051, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 26556434680851208, guid: 7c7535ff75fca9b429a1d0df64a35395,
         type: 3}
       propertyPath: m_Enabled
@@ -65767,6 +65831,51 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 535984444523311104, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 535984444523311104, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 535984444523311104, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: innerGlow
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 535984444523311104, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 535984444523311104, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 535984444523311104, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineDownsampling
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 535984444523311104, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXGroundMaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 535984444523311104, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 535984444523311104, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXScaleToRenderBounds
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 721055236357673730, guid: 7c7535ff75fca9b429a1d0df64a35395,
         type: 3}
       propertyPath: m_Enabled
@@ -65776,6 +65885,96 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540196476760938025, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540196476760938025, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540196476760938025, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: innerGlow
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540196476760938025, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540196476760938025, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540196476760938025, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineDownsampling
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540196476760938025, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXGroundMaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540196476760938025, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540196476760938025, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXScaleToRenderBounds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618633206668260151, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618633206668260151, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618633206668260151, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: innerGlow
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618633206668260151, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618633206668260151, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618633206668260151, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineDownsampling
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618633206668260151, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXGroundMaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618633206668260151, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618633206668260151, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXScaleToRenderBounds
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1672692161893360365, guid: 7c7535ff75fca9b429a1d0df64a35395,
         type: 3}
@@ -65811,6 +66010,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139110793069965817, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139110793069965817, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139110793069965817, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: innerGlow
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139110793069965817, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139110793069965817, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139110793069965817, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineDownsampling
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139110793069965817, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXGroundMaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139110793069965817, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139110793069965817, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXScaleToRenderBounds
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2627008035386593018, guid: 7c7535ff75fca9b429a1d0df64a35395,
         type: 3}
@@ -65852,6 +66096,51 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4421608533564992909, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421608533564992909, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421608533564992909, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: innerGlow
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421608533564992909, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421608533564992909, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421608533564992909, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineDownsampling
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421608533564992909, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXGroundMaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421608533564992909, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421608533564992909, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXScaleToRenderBounds
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4664017097402127654, guid: 7c7535ff75fca9b429a1d0df64a35395,
         type: 3}
       propertyPath: m_Enabled
@@ -65891,6 +66180,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183268053506720928, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183268053506720928, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183268053506720928, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: innerGlow
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183268053506720928, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183268053506720928, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183268053506720928, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineDownsampling
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183268053506720928, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXGroundMaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183268053506720928, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183268053506720928, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXScaleToRenderBounds
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6677306588250286555, guid: 7c7535ff75fca9b429a1d0df64a35395,
         type: 3}
@@ -65971,6 +66305,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7547419758213704238, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7665936756885194740, guid: 7c7535ff75fca9b429a1d0df64a35395,
         type: 3}
@@ -66092,10 +66431,100 @@ PrefabInstance:
       propertyPath: m_onWrongWireCut.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8062541758636120365, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062541758636120365, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062541758636120365, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: innerGlow
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062541758636120365, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062541758636120365, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062541758636120365, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineDownsampling
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062541758636120365, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXGroundMaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062541758636120365, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062541758636120365, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXScaleToRenderBounds
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8221571051154344187, guid: 7c7535ff75fca9b429a1d0df64a35395,
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447752271790577876, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447752271790577876, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447752271790577876, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: innerGlow
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447752271790577876, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447752271790577876, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447752271790577876, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineDownsampling
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447752271790577876, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXGroundMaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447752271790577876, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447752271790577876, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXScaleToRenderBounds
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8507859262386505480, guid: 7c7535ff75fca9b429a1d0df64a35395,
         type: 3}
@@ -66121,6 +66550,96 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064677913459490564, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064677913459490564, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064677913459490564, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: innerGlow
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064677913459490564, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064677913459490564, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064677913459490564, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineDownsampling
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064677913459490564, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXGroundMaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064677913459490564, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064677913459490564, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXScaleToRenderBounds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143818330290575898, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143818330290575898, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143818330290575898, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: innerGlow
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143818330290575898, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143818330290575898, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143818330290575898, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: outlineDownsampling
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143818330290575898, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXGroundMaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143818330290575898, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143818330290575898, guid: 7c7535ff75fca9b429a1d0df64a35395,
+        type: 3}
+      propertyPath: targetFXScaleToRenderBounds
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
