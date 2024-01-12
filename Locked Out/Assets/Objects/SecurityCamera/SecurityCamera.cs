@@ -7,10 +7,19 @@ public class SecurityCamera : MonoBehaviour
     [SerializeField] private float maxDegrees = 30;
     [SerializeField] private float duration;
     [SerializeField] private Transform pivot;
+    [SerializeField] private CameraDetection m_detection = null;
+
+    private Coroutine m_routine = null;
 
     private void Start()
     {
-        StartCoroutine(Rotation(maxDegrees));
+        m_routine = StartCoroutine(Rotation(maxDegrees));
+    }
+
+    private void OnDisable()
+    {
+        m_detection.gameObject.SetActive(false);
+        StopCoroutine(m_routine);
     }
 
     private IEnumerator Rotation(float targetRotation)
