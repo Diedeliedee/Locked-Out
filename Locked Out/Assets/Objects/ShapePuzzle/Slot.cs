@@ -8,7 +8,8 @@ public class Slot : HighlightHoverable, ISlot
     private int m_index = 0;
     private Piece m_insertedPiece = null;
 
-    public bool isCorrect => m_insertedPiece != null && m_insertedPiece.index == m_index;
+    public bool hasPiece => m_insertedPiece != null;
+    public bool isCorrect => hasPiece && m_insertedPiece.index == m_index;
 
     public void Register(int _index)
     {

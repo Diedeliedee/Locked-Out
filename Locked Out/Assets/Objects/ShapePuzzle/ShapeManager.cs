@@ -27,8 +27,20 @@ public class ShapeManager : Puzzle
 
     private void OnPieceInserted(Slot _slot)
     {
-        //  Check every slot. If every slot has the isCorrect piece, the puzzle is solved.
-        for (int i = 0; i < m_slots.Length; i++) if (!m_slots[i].isCorrect) return;
+        //  Check every slot. If every
+        for (int i = 0; i < m_slots.Length; i++)
+        {
+            //  If not every slot has a piece, return.
+            if (!m_slots[i].hasPiece) return;
+            //  If all slots are filled, but it is incorrect, call the mistake event.
+            if (!m_slots[i].isCorrect)
+            {
+                //  Mistake.
+                return;
+            }
+        }
+
         m_onSolved.Invoke();
+        for (int i = 0; i < m_slots.Length; i++) m_slots[i].onPlace.RemoveListener(OnPieceInserted);
     }
 }
