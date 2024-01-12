@@ -11,7 +11,7 @@ public class RotationCube : HighlightHoverable, IGrabbable
     {
         if (!m_grabbed) return;
 
-        onRotated.Invoke(joyconGyro.orientation);
+        onRotated?.Invoke(joyconGyro.orientation);
     }
 
     public void Grab(Transform _origin)

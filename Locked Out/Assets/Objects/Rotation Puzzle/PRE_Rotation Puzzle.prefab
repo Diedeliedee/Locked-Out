@@ -254,6 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eabcfb8e94ab3684bb5376e58201f8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joyconGyro: {fileID: 291913504313872905}
 --- !u!114 &291913504313872905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +290,7 @@ MonoBehaviour:
     infoRenderScale: 1
     useOuterGlow: 1
     useSingleOuterGlow: 1
-    outerGlowColorFront: {r: 0, g: 0, b: 0, a: 1}
+    outerGlowColorFront: {r: 1, g: 1, b: 1, a: 1}
     outerGlowColorBack: {r: 0, g: 0, b: 0, a: 1}
     outlineVisibleBeforeObject: 1
     blurType: 1
