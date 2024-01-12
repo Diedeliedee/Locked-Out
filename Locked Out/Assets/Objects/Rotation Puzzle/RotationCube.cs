@@ -35,10 +35,10 @@ public class RotationCube : HighlightHoverable, IGrabbable
         m_grabbed = false;
     }
 
-    protected override void Awake()
+    protected  void Start()
     {
         //  CALL AWAKEEE!!
-        base.Awake();
+        //base.Awake();
 
         if (JoyconManager.Instance == null)
         {

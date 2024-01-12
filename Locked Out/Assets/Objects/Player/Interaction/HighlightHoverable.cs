@@ -1,14 +1,14 @@
-﻿using Highlighters;
+﻿using HighlightPlus;
 using UnityEngine;
 
-[RequireComponent(typeof(Highlighter))]
+[RequireComponent(typeof(HighlightEffect))]
 public abstract class HighlightHoverable : MonoBehaviour, IHoverable
 {
-    private Highlighter m_hightlighter = null;
+    private HighlightEffect m_hightlighter = null;
 
     protected virtual void Awake()
     {
-        m_hightlighter = GetComponent<Highlighter>();
+        m_hightlighter = GetComponent<HighlightEffect>();
     }
 
     public virtual void OnEnter()
