@@ -14,7 +14,7 @@ public class RotationPuzzle : Puzzle
 
     private void OnCubeRotated(Quaternion _rotation)
     {
-        if (!CompareRotation(_rotation, m_guide.rotation, rotationTolerance)) return;
+        if (!CompareRotation(_rotation, m_guide.localRotation, rotationTolerance)) return;
 
         m_onSolved.Invoke();
         print("SOLVED LE PUZZLE");
