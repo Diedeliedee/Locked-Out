@@ -16,12 +16,7 @@ public class CameraDetection : MonoBehaviour
         m_light = GetComponent<Light>();
     }
 
-    private void Update()
-    {
-        PlayerDetected();
-    }
-
-    private bool PlayerDetected()
+    public bool PlayerDetected()
     {
         var originalRotation = transform.localRotation;
         var offset = m_light.spotAngle / 2f;
@@ -49,7 +44,6 @@ public class CameraDetection : MonoBehaviour
             if (_hit.transform.TryGetComponent(out PlayerMovement _player))
             {
                 Debug.Log("Player detected", gameObject);
-                // Time penalty here
                 return true;
             }
         }
