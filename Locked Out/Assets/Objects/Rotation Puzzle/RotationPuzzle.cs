@@ -17,6 +17,7 @@ public class RotationPuzzle : Puzzle
         if (!CompareRotation(_rotation, m_guide.rotation, rotationTolerance)) return;
 
         m_onSolved.Invoke();
+        print("SOLVED LE PUZZLE");
         m_rotationCube.onRotated -= OnCubeRotated;
     }
 

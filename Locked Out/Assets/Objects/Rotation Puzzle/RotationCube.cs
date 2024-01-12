@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class RotationCube : HighlightHoverable, IGrabbable
 {
+    [SerializeField] private JoyconDemo joyconGyro;
     public System.Action<Quaternion> onRotated = null;
 
     private bool m_grabbed = false;
@@ -10,7 +11,7 @@ public class RotationCube : HighlightHoverable, IGrabbable
     {
         if (!m_grabbed) return;
 
-        //  Get joycon rotation, and invoke on rotated.
+        onRotated.Invoke(joyconGyro.orientation);
     }
 
     public void Grab(Transform _origin)

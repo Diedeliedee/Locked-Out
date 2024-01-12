@@ -163,22 +163,22 @@ PrefabInstance:
     - target: {fileID: 1076960712436194409, guid: a0147add09d1c924191aacce1ec3e463,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071079
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1076960712436194409, guid: a0147add09d1c924191aacce1ec3e463,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1076960712436194409, guid: a0147add09d1c924191aacce1ec3e463,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.70710576
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1076960712436194409, guid: a0147add09d1c924191aacce1ec3e463,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1076960712436194409, guid: a0147add09d1c924191aacce1ec3e463,
         type: 3}
@@ -203,6 +203,10 @@ PrefabInstance:
         type: 3}
       insertIndex: 1
       addedObject: {fileID: 4084880809492722152}
+    - targetCorrespondingSourceObject: {fileID: 67731131532151113, guid: a0147add09d1c924191aacce1ec3e463,
+        type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 291913504313872905}
     - targetCorrespondingSourceObject: {fileID: 67731131532151113, guid: a0147add09d1c924191aacce1ec3e463,
         type: 3}
       insertIndex: -1
@@ -250,6 +254,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eabcfb8e94ab3684bb5376e58201f8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &291913504313872905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3336701158099865472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b5c154d920d754db92ed07a735dbc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stick: []
+  gyro: {x: 0, y: 0, z: 0}
+  accel: {x: 0, y: 0, z: 0}
+  jc_ind: 0
+  orientation: {x: 0, y: 0, z: 0, w: 0}
+  colorTest: 0
 --- !u!114 &6936605545280303306
 MonoBehaviour:
   m_ObjectHideFlags: 0
