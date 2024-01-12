@@ -8,10 +8,90 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 107139295402408427, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 107139295402408427, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107139295402408427, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 964660556190807299, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964660556190807299, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 964660556190807299, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118091933802219315, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3771420574713074874, guid: 14a9f4bbd4399564eb6877e990f45bd7,
         type: 3}
       propertyPath: m_Name
-      value: ShapePuzzle Variant
+      value: PRE_Shape Puzzle Scene Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917773102781197266, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917773102781197266, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917773102781197266, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4321617713441528586, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4321617713441528586, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4321617713441528586, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500239339894865537, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500239339894865537, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500239339894865537, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 5891565795253968449, guid: 14a9f4bbd4399564eb6877e990f45bd7,
         type: 3}
@@ -62,6 +142,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204212481954336557, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204212481954336557, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204212481954336557, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7194563980763323092, guid: 14a9f4bbd4399564eb6877e990f45bd7,
         type: 3}
@@ -178,6 +273,36 @@ PrefabInstance:
       propertyPath: m_onSolved.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7352580981282797954, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7352580981282797954, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7352580981282797954, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151922281942383816, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151922281942383816, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151922281942383816, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -213,18 +338,12 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2090451575675244753}
-    - targetCorrespondingSourceObject: {fileID: 88656846157886398, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+    - targetCorrespondingSourceObject: {fileID: 2682873036399961542, guid: 14a9f4bbd4399564eb6877e990f45bd7,
         type: 3}
-      insertIndex: -1
+      insertIndex: 2
       addedObject: {fileID: 1821534149298006251}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14a9f4bbd4399564eb6877e990f45bd7, type: 3}
---- !u!4 &79864597633955380 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 88656846157886398, guid: 14a9f4bbd4399564eb6877e990f45bd7,
-    type: 3}
-  m_PrefabInstance: {fileID: 9364004237231498}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1178561639316586346 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1187352789402106592, guid: 14a9f4bbd4399564eb6877e990f45bd7,
@@ -237,6 +356,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8064f69b26871945bf480da7b94f260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2673517828328104012 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2682873036399961542, guid: 14a9f4bbd4399564eb6877e990f45bd7,
+    type: 3}
+  m_PrefabInstance: {fileID: 9364004237231498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3991227137749634191 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3982003871001807109, guid: 14a9f4bbd4399564eb6877e990f45bd7,
@@ -376,6 +501,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShapePuzzleCube (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8688525495266180016, guid: d66c0d87559b80940a2bab2dd781eb21,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -471,6 +601,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShapePuzzleCube (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688525495266180016, guid: d66c0d87559b80940a2bab2dd781eb21,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -568,6 +703,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShapePuzzleCube (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8688525495266180016, guid: d66c0d87559b80940a2bab2dd781eb21,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -663,6 +803,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShapePuzzleCube (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688525495266180016, guid: d66c0d87559b80940a2bab2dd781eb21,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -760,6 +905,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShapePuzzleCube (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8688525495266180016, guid: d66c0d87559b80940a2bab2dd781eb21,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -789,7 +939,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 79864597633955380}
+    m_TransformParent: {fileID: 2673517828328104012}
     m_Modifications:
     - target: {fileID: 3189272297400462757, guid: d66c0d87559b80940a2bab2dd781eb21,
         type: 3}
@@ -804,27 +954,27 @@ PrefabInstance:
     - target: {fileID: 8217939782462677694, guid: d66c0d87559b80940a2bab2dd781eb21,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 26.577713
+      value: 0.19999996
       objectReference: {fileID: 0}
     - target: {fileID: 8217939782462677694, guid: d66c0d87559b80940a2bab2dd781eb21,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8053854
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8217939782462677694, guid: d66c0d87559b80940a2bab2dd781eb21,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.80538523
+      value: 0.19999997
       objectReference: {fileID: 0}
     - target: {fileID: 8217939782462677694, guid: d66c0d87559b80940a2bab2dd781eb21,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.30100006
       objectReference: {fileID: 0}
     - target: {fileID: 8217939782462677694, guid: d66c0d87559b80940a2bab2dd781eb21,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 8217939782462677694, guid: d66c0d87559b80940a2bab2dd781eb21,
         type: 3}
@@ -874,6 +1024,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8472344761723595561, guid: d66c0d87559b80940a2bab2dd781eb21, type: 3}
     - {fileID: 4566056277140169564, guid: d66c0d87559b80940a2bab2dd781eb21, type: 3}
+    - {fileID: 4859854036278464373, guid: d66c0d87559b80940a2bab2dd781eb21, type: 3}
+    - {fileID: 2031099024003696340, guid: d66c0d87559b80940a2bab2dd781eb21, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -956,6 +1108,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShapePuzzleCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688525495266180016, guid: d66c0d87559b80940a2bab2dd781eb21,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1053,6 +1210,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShapePuzzleCube (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8688525495266180016, guid: d66c0d87559b80940a2bab2dd781eb21,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1148,6 +1310,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShapePuzzleCube (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688525495266180016, guid: d66c0d87559b80940a2bab2dd781eb21,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

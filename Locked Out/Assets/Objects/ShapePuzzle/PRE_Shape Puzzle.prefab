@@ -210,6 +210,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  m_onGuessedWrong:
+    m_PersistentCalls:
+      m_Calls: []
   m_pieces: []
   m_slots:
   - {fileID: 2335683762729782351}
@@ -1585,6 +1588,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7080834284324594536, guid: 73e397f2243a0ef4c91b6c1196c40a69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9086624464859322341, guid: 73e397f2243a0ef4c91b6c1196c40a69,
         type: 3}

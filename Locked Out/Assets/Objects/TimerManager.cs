@@ -34,6 +34,12 @@ public class TimerManager : MonoBehaviour
         }
     }
 
+    public void CallWinState()
+    {
+        m_onGameWon.Invoke();
+        Time.timeScale = 0f;
+    }
+
     public void RemoveTime(float _seconds)
     {
         if (m_instaKill) _seconds = Mathf.Infinity;

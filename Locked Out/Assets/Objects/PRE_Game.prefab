@@ -90,7 +90,19 @@ MonoBehaviour:
         m_CallState: 2
   m_onGameWon:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7304781205433609858}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_onTimeUpdated:
     m_PersistentCalls:
       m_Calls:
@@ -148,6 +160,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3564056871513174974}
     m_Modifications:
+    - target: {fileID: 391033855348204879, guid: e3967398a7b079e49a9dae04aa5330b5,
+        type: 3}
+      propertyPath: completed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 391033855348204879, guid: e3967398a7b079e49a9dae04aa5330b5,
+        type: 3}
+      propertyPath: completed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 391033855348204879, guid: e3967398a7b079e49a9dae04aa5330b5,
+        type: 3}
+      propertyPath: completed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4755505409007902715}
+    - target: {fileID: 391033855348204879, guid: e3967398a7b079e49a9dae04aa5330b5,
+        type: 3}
+      propertyPath: completed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 391033855348204879, guid: e3967398a7b079e49a9dae04aa5330b5,
+        type: 3}
+      propertyPath: completed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CallWinState
+      objectReference: {fileID: 0}
+    - target: {fileID: 391033855348204879, guid: e3967398a7b079e49a9dae04aa5330b5,
+        type: 3}
+      propertyPath: completed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TimerManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 391033855348204879, guid: e3967398a7b079e49a9dae04aa5330b5,
+        type: 3}
+      propertyPath: completed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 672701791932409293, guid: e3967398a7b079e49a9dae04aa5330b5,
         type: 3}
       propertyPath: m_onFocus.m_PersistentCalls.m_Calls.Array.size
@@ -289,6 +336,12 @@ MonoBehaviour:
 --- !u!4 &6924597440249958903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4808063665511192021, guid: e3967398a7b079e49a9dae04aa5330b5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2495188544976077858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7304781205433609858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5188000601069169312, guid: e3967398a7b079e49a9dae04aa5330b5,
     type: 3}
   m_PrefabInstance: {fileID: 2495188544976077858}
   m_PrefabAsset: {fileID: 0}
