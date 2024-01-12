@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 151948316c25cd2439ee5a0bd0a8dfd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_time: 300
+  m_time: 1200
   m_instaKill: 0
   m_onTimeLost:
     m_PersistentCalls:
@@ -299,11 +299,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -900.6074
-      objectReference: {fileID: 0}
-    - target: {fileID: 7400310833654161826, guid: e3967398a7b079e49a9dae04aa5330b5,
-        type: 3}
-      propertyPath: m_enableTime
-      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 8956412028277962539, guid: e3967398a7b079e49a9dae04aa5330b5,
         type: 3}

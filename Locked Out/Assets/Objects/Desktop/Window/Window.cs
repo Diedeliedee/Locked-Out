@@ -26,7 +26,7 @@ public class Window : MonoBehaviour
     {
         m_RectTransform = GetComponent<RectTransform>();
         m_focusReceiver = GetComponentInChildren<WindowFocusReceiver>();
-
+        if(m_focusReceiver != null)
         m_focusReceiver.onWindowClick += OnWindowClick;
     }
 

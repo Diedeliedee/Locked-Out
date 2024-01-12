@@ -490,7 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_textMesh: {fileID: 8596211458298630128}
   m_gameOverColor: {r: 1, g: 0, b: 0, a: 1}
-  m_enableTime: 3
+  m_enableTime: 1140
   m_window: {fileID: 914699385835920885}
   m_onTimePassed:
     m_PersistentCalls:

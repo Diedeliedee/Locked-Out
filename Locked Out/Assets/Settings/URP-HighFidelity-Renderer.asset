@@ -137,4 +137,4 @@ MonoBehaviour:
   DepthLayerMask:
     serializedVersion: 2
     m_Bits: 0
-  renderingEvent: 0
+  renderingEvent: 1

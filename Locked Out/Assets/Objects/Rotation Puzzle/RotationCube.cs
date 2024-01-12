@@ -35,8 +35,11 @@ public class RotationCube : HighlightHoverable, IGrabbable
         m_grabbed = false;
     }
 
-    private void Awake()
+    protected override void Awake()
     {
+        //  CALL AWAKEEE!!
+        base.Awake();
+
         if (JoyconManager.Instance == null)
         {
             Debug.LogError("No Joycon Manager found in scene.. JESSEEEEEEEEE!111");
@@ -55,7 +58,7 @@ public class RotationCube : HighlightHoverable, IGrabbable
     public Quaternion GetOrientation()
     {
         // make sure the Joycon only gets checked if attached
-        if (joycons.Count <= 0) return Quaternion.identity;
+        if (joycons.Count <= 0) return Quaternion.identity; 
 
         var j = joycons[jc_ind];
 

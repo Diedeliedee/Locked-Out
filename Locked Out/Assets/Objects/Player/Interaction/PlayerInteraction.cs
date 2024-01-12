@@ -36,9 +36,13 @@ public class PlayerInteraction : MonoBehaviour
         }
 
         //  If a valid interactable is found, cache it, and call OnEnter function. 
-        m_cachedInteractable?.OnExit();
-        m_cachedInteractable = _hoverable;
-        m_cachedInteractable.OnEnter();
+
+        if (_hoverable != m_cachedInteractable)
+        {
+            m_cachedInteractable?.OnExit();
+            m_cachedInteractable = _hoverable;
+            m_cachedInteractable.OnEnter();
+        }
 
         //  Have the toolbox check all possible interaction types.
         if (buttonPressed) m_toolbox.CrossReference(_hoverable);
