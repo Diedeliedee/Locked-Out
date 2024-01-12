@@ -3671,7 +3671,15 @@ PrefabInstance:
         The id code for the correct server
         is:
 
-        NEW-?ERROR?-?ERROR?'
+
+        1st word: N E W
+
+
+        2nd word: ?ERROR?
+
+
+        3rd word:
+        ?ERROR?'
       objectReference: {fileID: 0}
     - target: {fileID: 4487232466790531147, guid: 4394334838f6afa4bbefb62aa904e6c2,
         type: 3}
