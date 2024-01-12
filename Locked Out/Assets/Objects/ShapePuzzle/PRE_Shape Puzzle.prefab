@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 7194563980763323092}
   - component: {fileID: 4636098925600529731}
   m_Layer: 0
-  m_Name: ShapePuzzle
+  m_Name: PRE_Shape Puzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
