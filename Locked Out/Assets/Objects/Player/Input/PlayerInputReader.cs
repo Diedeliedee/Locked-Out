@@ -3,8 +3,8 @@
 public class PlayerInputReader : MonoBehaviour
 {
     //  Properties:
-    public Vector2 movementInput => m_input.DroneControls.Movement.ReadValue<Vector2>();
-    public float pitchInput => m_input.DroneControls.Rotation.ReadValue<float>();
+    public float movementInput => m_input.DroneControls.Movement.ReadValue<float>();
+    public Vector2 rotationInput => m_input.DroneControls.Rotation.ReadValue<Vector2>();
     public bool interactWasPressed => m_input.DroneControls.Interact.triggered;
     public bool toggleColorBlindModeWasPressed => m_input.General.ToggleColorBlindMode.triggered;
 

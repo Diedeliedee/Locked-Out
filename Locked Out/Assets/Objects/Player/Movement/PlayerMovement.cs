@@ -35,14 +35,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        var input = m_input.movementInput;
         var velocity = Vector3.zero;
         var deltaTime = Time.deltaTime;
         var onGround = m_groundCheck.IsOnGround();
 
         //  Calculating the desired velocity for moving, and rotating.
-        m_movementAcceleration.CalculateVelocity(input.y, m_moveSpeed, isGrounded ? m_moveGrip : m_moveGrip * m_airGripMultiplier, deltaTime);
-        m_rotationAcceleration.CalculateVelocity(input.x, m_turnSpeed, isGrounded ? m_turnGrip : m_turnGrip * m_airGripMultiplier, deltaTime);
+        m_movementAcceleration.CalculateVelocity(m_input.movementInput, m_moveSpeed, isGrounded ? m_moveGrip : m_moveGrip * m_airGripMultiplier, deltaTime);
+        m_rotationAcceleration.CalculateVelocity(m_input.rotationInput.x, m_turnSpeed, isGrounded ? m_turnGrip : m_turnGrip * m_airGripMultiplier, deltaTime);
 
         //  Apply calculated velocity to variable.
         velocity += transform.forward * m_movementAcceleration.velocity;

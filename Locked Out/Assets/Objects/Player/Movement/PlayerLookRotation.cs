@@ -22,7 +22,7 @@ public class PlayerLookRotation : MonoBehaviour
 
     private void Update()
     {
-        m_pitch += m_input.pitchInput * m_speed * Time.deltaTime;
+        m_pitch += m_input.rotationInput.y * m_speed * Time.deltaTime;
         m_pitch = Mathf.Clamp(m_pitch, -m_maxOffset, m_maxOffset);
         transform.localEulerAngles = new Vector3(-m_pitch, 0f, 0f);
     }
