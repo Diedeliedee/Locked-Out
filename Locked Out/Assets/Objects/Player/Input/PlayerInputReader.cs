@@ -5,15 +5,20 @@ public class PlayerInputReader : MonoBehaviour
     //  Properties:
     public float movementInput => m_input.DroneControls.Movement.ReadValue<float>();
     public Vector2 rotationInput => m_input.DroneControls.Rotation.ReadValue<Vector2>();
+    public Quaternion gyroOrientationInput => m_joyconInput.GetOrientation();
     public bool interactWasPressed => m_input.DroneControls.Interact.triggered;
     public bool toggleColorBlindModeWasPressed => m_input.General.ToggleColorBlindMode.triggered;
 
     //  References:
     private PlayerInputReceiver m_input = null;
+    private JoyconRotationTransmitter m_joyconInput = null;
 
     private void Awake()
     {
         m_input = new();
+        m_joyconInput = new();
+
+        m_joyconInput.Setup();
     }
 
     private void Start()

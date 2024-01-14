@@ -2,7 +2,7 @@
 
 public interface IGrabbable
 {
-    public void Grab(Transform _origin);
+    public void OnGrab(Transform _origin);
 
-    public void Release();
+    public void OnRelease();
 }

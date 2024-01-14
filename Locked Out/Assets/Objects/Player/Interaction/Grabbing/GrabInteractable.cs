@@ -24,7 +24,7 @@ public class GrabInteractable : HighlightHoverable, IGrabbable
         m_defaultLayer = gameObject.layer;
     }
 
-    public void Grab(Transform _origin)
+    public void OnGrab(Transform _origin)
     {
         transform.parent = _origin;
         transform.localPosition = Vector3.zero;
@@ -37,7 +37,7 @@ public class GrabInteractable : HighlightHoverable, IGrabbable
         onGrab?.Invoke();
     }
 
-    public void Release()
+    public void OnRelease()
     {
         transform.parent = m_defaultParent;
 

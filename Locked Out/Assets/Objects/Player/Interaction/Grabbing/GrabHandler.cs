@@ -26,14 +26,14 @@ public class GrabHandler : MonoBehaviour
     private void Grab(IGrabbable _item)
     {
         //  Play holding animation.
-        _item.Grab(m_pivot);
+        _item.OnGrab(m_pivot);
         m_holdingItem = _item;
     }
 
     private void Release()
     {
         //  Play release animation.
-        m_holdingItem.Release();
+        m_holdingItem.OnRelease();
         m_holdingItem = null;
     }
 }
