@@ -3,34 +3,16 @@ using UnityEngine;
 public class RotationCube : HighlightHoverable, IGrabbable
 {
     public System.Action<Quaternion> onRotated = null;
-    private bool m_grabbed = false;
 
-    private PlayerInputReader m_input = null;
+    public Vector3 position => transform.position;
 
+    public void OnGrab(Transform _origin) { }
 
-    protected override void Awake()
+    public void OnHold(Transform _origin, float _deltaTime)
     {
-        base.Awake();
-        m_input = FindObjectOfType<PlayerInputReader>();
+        transform.rotation = _origin.rotation;
+        onRotated?.Invoke(transform.localRotation);
     }
 
-    private void Update()
-    {
-        if (!m_grabbed) return;
-
-        var rotation = m_input.gyroOrientationInput;
-
-        transform.localRotation = rotation;
-        onRotated?.Invoke(rotation);
-    }
-
-    public void OnGrab(Transform _origin)
-    {
-        m_grabbed = true;
-    }
-
-    public void OnRelease()
-    {
-        m_grabbed = false;
-    }
+    public void OnRelease() { }
 }

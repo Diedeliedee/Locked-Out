@@ -49,7 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe5a2dae2c53de43bf22ad7c5283b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onGrab:
+  m_smoothenTime: 0.025
+  m_onGrab:
     m_PersistentCalls:
       m_Calls: []
   enablePhysicsOnRelease: 0

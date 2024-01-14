@@ -6,6 +6,11 @@ public class Toolbox
     [SerializeField] private GrabHandler m_grabbing = null;
     //private CutHandler m_cutting = null;
 
+    public void Tick(float _deltaTime)
+    {
+        m_grabbing.Tick(_deltaTime);
+    }
+
     public void CrossReference(IHoverable _hoverable)
     {
         // Quick and dirty method of discerning which type of interaction is needed for which object we're interacting with.
