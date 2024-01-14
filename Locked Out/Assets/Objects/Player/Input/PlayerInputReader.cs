@@ -5,20 +5,18 @@ public class PlayerInputReader : MonoBehaviour
     //  Properties:
     public float movementInput => m_input.DroneControls.Movement.ReadValue<float>();
     public Vector2 rotationInput => m_input.DroneControls.Rotation.ReadValue<Vector2>();
-    public Quaternion gyroOrientationInput => m_joyconInput.GetOrientation();
+    public Quaternion gyroOrientationInput => m_gyroInput != null ? m_gyroInput.GetOrientation() : Quaternion.identity;
     public bool interactWasPressed => m_input.DroneControls.Interact.triggered;
     public bool toggleColorBlindModeWasPressed => m_input.General.ToggleColorBlindMode.triggered;
 
     //  References:
     private PlayerInputReceiver m_input = null;
-    private JoyconRotationTransmitter m_joyconInput = null;
+    private IGyroTransmitter m_gyroInput = null;
 
     private void Awake()
     {
         m_input = new();
-        m_joyconInput = new();
-
-        m_joyconInput.Setup();
+        SetupGyroTransmitter();
     }
 
     private void Start()
@@ -29,4 +27,18 @@ public class PlayerInputReader : MonoBehaviour
     public void EnableInput() => m_input.Enable();
 
     public void DisableInput() => m_input.Disable();
+
+    private void SetupGyroTransmitter()
+    {
+        m_gyroInput = new JoyconRotationTransmitter();
+
+        if (m_gyroInput.Setup()) return;
+
+        Debug.LogWarning("No joycons found! Switching to controller gyro controls!");
+        m_gyroInput = new DSRotationTransmitter();
+
+        if (m_gyroInput.Setup()) return;
+
+        Debug.LogWarning("No controller found. Gyro input is not working!");
+    }
 }

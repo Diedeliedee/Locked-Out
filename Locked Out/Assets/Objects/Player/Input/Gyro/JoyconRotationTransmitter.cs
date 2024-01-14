@@ -1,23 +1,29 @@
 ﻿using UnityEngine;
 
-public class JoyconRotationTransmitter
+public class JoyconRotationTransmitter : IGyroTransmitter
 {
     private Joycon m_joycon = null;
 
-    public void Setup()
+    public bool Setup()
     {
+        //  Check if the joyconmanager is in the scene.
         if (JoyconManager.Instance == null)
         {
             Debug.LogError("No Joycon Manager found in scene.. JESSEEEEEEEEE!111");
-            return;
+            return false;
         }
 
-        //  Check if any joycons have been found, and add them to the list.
-        m_joycon = JoyconManager.Instance.j[0];
-        if (m_joycon == null)
+        //  Check if any joycons have been found.
+        if (JoyconManager.Instance.j.Count <= 0)
         {
             Debug.LogWarning("No joycons found! JESSEEE NO JOYCONS FOUUUNDD!!11");
+            return false;
         }
+
+        //  Cache the first joycon in the array.
+        m_joycon = JoyconManager.Instance.j[0];
+
+        return true;
     }
 
     public Quaternion GetOrientation()
