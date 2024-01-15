@@ -7,8 +7,17 @@ public class JoyconRotationTransmitter : IGyroTransmitter
 {
     private List<Joycon> m_joycons;
 
+    public float[] stick;
+    public Vector3 gyro;
+    public Vector3 accel;
+    public int jc_ind = 0;
+    public Quaternion orientation;
+
     public bool Setup()
     {
+        gyro = new Vector3(0, 0, 0);
+        accel = new Vector3(0, 0, 0);
+
         //  Check if the joyconmanager is in the scene.
         if (JoyconManager.Instance == null)
         {
@@ -43,7 +52,12 @@ public class JoyconRotationTransmitter : IGyroTransmitter
             return Quaternion.identity;
         }
 
-        var orientation = m_joycons[0].GetVector();
+        var j = m_joycons[jc_ind];
+
+        stick = j.GetStick();
+        gyro = j.GetGyro();
+        accel = j.GetAccel();
+        orientation = j.GetVector();
 
         Quaternion newOrientation = new Quaternion();
 
