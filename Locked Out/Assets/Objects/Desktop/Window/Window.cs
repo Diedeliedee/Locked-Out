@@ -9,18 +9,16 @@ public class Window : MonoBehaviour
     [SerializeField] private UnityEvent m_onDefocus = new();
     [SerializeField] private UnityEvent<Window> m_onDestroy = new();
 
+    //  Desktop events.
+    public System.Action<Window> onRequestFocus;
+    public System.Action<Window> onRequestDestroy;
+
     //  Reference:
     private RectTransform m_RectTransform = null;
     private WindowFocusReceiver m_focusReceiver = null;
 
-    #region Properties
-    //  Events moved to properties to enable reference tracking.
-    public UnityEvent<Window> onSetFocusEvent => m_onFocus;
-    public UnityEvent onDefocus => m_onDefocus;
-    public UnityEvent<Window> onDestroy => m_onDestroy;
-
+    //  Properties:
     public RectTransform rectTransform => m_RectTransform;
-    #endregion
 
     private void Awake()
     {
@@ -30,8 +28,9 @@ public class Window : MonoBehaviour
         m_focusReceiver.onWindowClick += OnWindowClick;
     }
 
+    #region Interface
     /// <summary>
-    /// the m_windows hides it self
+    /// The window hides it self
     /// </summary>
     public void Hide()
     {
@@ -39,19 +38,18 @@ public class Window : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void Focus()
+    {
+        onRequestFocus?.Invoke(this);
+    }
+
     /// <summary>
-    /// closes the window
+    /// Closes the window
     /// </summary>
     public void DestroySelf()
     {
-        m_onDefocus.Invoke();
-        m_onDestroy.Invoke(this);
+        onRequestDestroy?.Invoke(this);
         //Destroy call moved to Desktop after removing it from the list because unity keeps complaining about it "disapearing"
-    }
-
-    public void OnWindowClick(PointerEventData _eventData)
-    {
-        Focus();
     }
 
     /// <summary>
@@ -61,10 +59,31 @@ public class Window : MonoBehaviour
     {
         m_RectTransform.anchoredPosition = _screenPosition;
     }
+    #endregion
 
-    public void Focus()
+    #region Events
+    public void OnWindowClick(PointerEventData _eventData)
+    {
+        Focus();
+    }
+
+    public void OnFocus()
     {
         transform.SetAsLastSibling();
         m_onFocus.Invoke(this);
     }
+
+    public void OnDefocus()
+    {
+        m_onDefocus.Invoke();
+    }
+
+    public void OnObliterate()
+    {
+        m_onDefocus.Invoke();
+        m_onDestroy.Invoke(this);
+    }
+    #endregion
+
+
 }
