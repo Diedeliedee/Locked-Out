@@ -35,7 +35,11 @@ public class JoyconRotationTransmitter : IGyroTransmitter
     public Quaternion GetOrientation()
     {
         //  Make sure the Joycon only gets checked if attached.
-        if (m_joycon == null) return Quaternion.identity;
+        if (m_joycon == null)
+        {
+            Debug.LogWarning("Joycon lost connection!");
+            return Quaternion.identity;
+        }
 
         //  Get the joycon orientation.
         var orientation = m_joycon.GetVector();
