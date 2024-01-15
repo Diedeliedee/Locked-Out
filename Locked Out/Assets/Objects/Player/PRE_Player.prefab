@@ -45,12 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87eafb1b2c23fd54f9ec0027ad73a0c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_interactionDistance: 3
+  m_interactionDistance: 2
   m_interactionLayer:
     serializedVersion: 2
     m_Bits: 64
   m_toolbox:
-    m_input: {fileID: 565657021083418606}
     m_grabbing: {fileID: 9096368599217257375}
   m_raycastOrigin: {fileID: 1402224568941305504}
 --- !u!1 &949151446052490396
@@ -100,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pivot: {fileID: 5339131408715853093}
+  m_gripLossDistance: 3
 --- !u!1 &1336661019299461184
 GameObject:
   m_ObjectHideFlags: 0
