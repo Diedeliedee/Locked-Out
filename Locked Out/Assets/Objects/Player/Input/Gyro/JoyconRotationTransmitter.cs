@@ -1,8 +1,11 @@
-﻿using UnityEngine;
+﻿using Joeri.Tools.Movement;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class JoyconRotationTransmitter : IGyroTransmitter
 {
-    private Joycon m_joycon = null;
+    private List<Joycon> m_joycons;
 
     public bool Setup()
     {
@@ -13,18 +16,17 @@ public class JoyconRotationTransmitter : IGyroTransmitter
             return false;
         }
 
-        //  Check if any joycons have been found.
-        if (JoyconManager.Instance.j.Count <= 0)
+        //  Check if any m_joycons have been found.
+        if (JoyconManager.Instance.j == null || JoyconManager.Instance.j.Count <= 0)
         {
             Debug.LogWarning("No joycons found! JESSEEE NO JOYCONS FOUUUNDD!!11");
             return false;
         }
 
-        //  Cache the first joycon in the array.
-        m_joycon = JoyconManager.Instance.j[0];
+        m_joycons = JoyconManager.Instance.j;
 
         //  If the joycon is still null somehow, give up.
-        if (m_joycon == null)
+        if (m_joycons == null || m_joycons.Count <= 0)
         {
             Debug.LogWarning("Joycon is somehow still not found.  :(.");
         }
@@ -35,22 +37,21 @@ public class JoyconRotationTransmitter : IGyroTransmitter
     public Quaternion GetOrientation()
     {
         //  Make sure the Joycon only gets checked if attached.
-        if (m_joycon == null)
+        if (m_joycons == null || m_joycons.Count <= 0)
         {
             Debug.LogWarning("Joycon lost connection!");
             return Quaternion.identity;
         }
 
-        //  Get the joycon orientation.
-        var orientation = m_joycon.GetVector();
+        var orientation = m_joycons[0].GetVector();
 
-        //  Modify it to match Unity's dimensions.
-        return new Quaternion
-        {
-            w = orientation.w,
-            x = -orientation.y,
-            y = -orientation.z,
-            z = orientation.x
-        };
+        Quaternion newOrientation = new Quaternion();
+
+        newOrientation.w = orientation.w;
+        newOrientation.x = -orientation.y;
+        newOrientation.y = -orientation.z;
+        newOrientation.z = orientation.x;
+
+        return newOrientation;
     }
 }
