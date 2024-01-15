@@ -4044,22 +4044,19 @@ PrefabInstance:
       value: 'DRONE <color=red>CONTROLS</color>:
 
 
-        <color=red>W/S</color>:
+        <color=red>Left joystick</color>:
         move forwards/backwards
 
 
-        <color=red>Left/Right arrow</color>: turn
-        left/right
+        <color=red>Right joystick</color>: turn
+        left/right, look up/down
 
 
-        <color=red>Up/Down arrow</color>: look up/down
+        <color=red>X</color>: interact
 
 
-        <color=red>Space</color>:
-        interact
-
-
-        <color=red>Gyro</color>: rotate objects'
+        <color=red>Power
+        glove</color>: rotate objects'
       objectReference: {fileID: 0}
     - target: {fileID: 4487232466790531147, guid: 4394334838f6afa4bbefb62aa904e6c2,
         type: 3}

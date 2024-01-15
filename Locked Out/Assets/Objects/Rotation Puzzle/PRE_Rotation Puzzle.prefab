@@ -62,7 +62,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  rotationTolerance: 10
+  rotationTolerance: 30
   m_rotationCube: {fileID: 8714980827727192005}
   m_guide: {fileID: 1918599652480860534}
 --- !u!1 &3486190971718948675
@@ -373,11 +373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eabcfb8e94ab3684bb5376e58201f8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stick: []
-  gyro: {x: 0, y: 0, z: 0}
-  accel: {x: 0, y: 0, z: 0}
-  orientation: {x: 0, y: 0, z: 0, w: 0}
-  jc_ind: 0
 --- !u!114 &256681298196697003
 MonoBehaviour:
   m_ObjectHideFlags: 0

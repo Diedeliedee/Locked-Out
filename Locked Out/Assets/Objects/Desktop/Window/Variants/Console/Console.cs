@@ -28,18 +28,18 @@ public class Console : MonoBehaviour
                          System.Environment.NewLine +
                          "[♠] Welcome to CardOS, where every command is a game!" + System.Environment.NewLine +
                          System.Environment.NewLine +
-                         "[♦] Type 'help' to see a hint but it will cost you." + System.Environment.NewLine +
-                         System.Environment.NewLine +
                          "[♣] Aces high! Let the cards guide your way." + System.Environment.NewLine +
                          System.Environment.NewLine +
+                         "[♦] HINT: The Joker's secret lies in the cards he loves." + System.Environment.NewLine +
+                         "Observe the suits closely, and let the symbols reveal the path." + System.Environment.NewLine +
+                         "Look beyond the physical, and let the doors guide your way."+ System.Environment.NewLine +
                          "[♥] Password: $ ";
-    string wrongPasswordString = "[♦] Incorrect password! The Joker's riddles are tricky. Try again." + System.Environment.NewLine + "[♥] Password: $ ";
+    string wrongPasswordString = "[♦] Incorrect password! The Joker's riddles are tricky. Try again." + System.Environment.NewLine +
+                         "[♦] HINT: The Joker's secret lies in the cards he loves." + System.Environment.NewLine +
+                         "Observe the suits closely, and let the symbols reveal the path." + System.Environment.NewLine +
+                         "Look beyond the physical, and let the doors guide your way."+ System.Environment.NewLine +
+                         "[♥] Password: $ ";
     string correctPasswordString = "";
-    string hintString = "[♠] HINT: The Joker's secret lies in the cards he loves." + System.Environment.NewLine +
-                        "Observe the suits closely, and let the symbols reveal the path." + System.Environment.NewLine +
-                        "Look beyond the physical, and the password may unfold like a royal flush." + System.Environment.NewLine +
-                         System.Environment.NewLine +
-                         "[♥] Password: $ ";
 
 
 
@@ -103,10 +103,6 @@ public class Console : MonoBehaviour
         {
             completed?.Invoke();
             animateText = StartCoroutine(AnimateText(correctPasswordString));
-        }
-        else if (lastInput == "help")
-        {
-            animateText = StartCoroutine(AnimateText(hintString));
         }
         else
         {

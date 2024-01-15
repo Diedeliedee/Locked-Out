@@ -18,6 +18,7 @@ public class RotationPuzzle : Puzzle
 
         m_onSolved.Invoke();
         print("SOLVED LE PUZZLE");
+        m_rotationCube.transform.localRotation = m_guide.localRotation;
         m_rotationCube.onRotated -= OnCubeRotated;
     }
 
