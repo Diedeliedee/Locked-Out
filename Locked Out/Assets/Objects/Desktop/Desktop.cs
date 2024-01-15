@@ -11,11 +11,11 @@ public class Desktop : MonoBehaviour
 
     private void Start()
     {
-        m_windows = GetComponentsInChildren<Window>().ToList();
+        m_windows = GetComponentsInChildren<Window>(true).ToList();
         foreach (Window w in m_windows)
         {
-            w.onSetFocusEvent.AddListener(SetFocusWindow);
-            w.onDestroy.AddListener(RemoveWindow);
+            w.onRequestFocus += SetFocusWindow;
+            w.onRequestDestroy += RemoveWindow;
         }
         Cursor.lockState = CursorLockMode.Confined;
     }
@@ -23,24 +23,27 @@ public class Desktop : MonoBehaviour
     public void AddWindow(Window window)
     {
         m_windows.Add(window);
-        window.onSetFocusEvent.AddListener(SetFocusWindow);
-        window.onDestroy.AddListener(RemoveWindow);
-        //set the focus window to be the new window
-        window.onSetFocusEvent?.Invoke(window);
+        window.onRequestFocus += SetFocusWindow;
+        window.onRequestDestroy += RemoveWindow;
+
+        //  Set the focus window to be the new window
+        SetFocusWindow(window);
     }
 
     public void RemoveWindow(Window window)
     {
         m_windows.Remove(window);
-        window.onSetFocusEvent.RemoveListener(SetFocusWindow);
-        window.onDestroy.RemoveListener(RemoveWindow);
+        window.onRequestFocus -= SetFocusWindow;
+        window.onRequestDestroy -= RemoveWindow;
+        window.OnObliterate();
         Destroy(window.gameObject);
     }
 
     public void SetFocusWindow(Window window)
     {
-        if (m_focussedWindow != null) m_focussedWindow.onDefocus?.Invoke();
+        if (m_focussedWindow != null) m_focussedWindow.OnDefocus();
         m_focussedWindow = window;
+        m_focussedWindow.OnFocus();
     }
 
     /// <summary>
