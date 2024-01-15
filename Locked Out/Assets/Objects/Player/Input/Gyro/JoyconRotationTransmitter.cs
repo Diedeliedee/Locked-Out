@@ -23,6 +23,12 @@ public class JoyconRotationTransmitter : IGyroTransmitter
         //  Cache the first joycon in the array.
         m_joycon = JoyconManager.Instance.j[0];
 
+        //  If the joycon is still null somehow, give up.
+        if (m_joycon == null)
+        {
+            Debug.LogWarning("Joycon is somehow still not found.  :(.");
+        }
+
         return true;
     }
 
