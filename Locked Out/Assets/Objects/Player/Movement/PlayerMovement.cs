@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Verticality:")]
     [SerializeField] private float m_airGripMultiplier = 0.25f;
     [SerializeField] private float m_hardFallTreshold = 3f;
+    [SerializeField] private float m_bounceLimit = 3f;
     [SerializeField] private UnityEvent m_onLand;
 
     private PlayerInputReader m_input = null;
@@ -50,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         if (onGround && m_verticalAcceleration.velocity <= 0)
         {
             if (m_verticalAcceleration.velocity < -m_hardFallTreshold) m_onLand.Invoke();
-            m_verticalAcceleration.velocity = -m_verticalAcceleration.velocity * 0.2f;
+            m_verticalAcceleration.velocity = Mathf.Clamp(-m_verticalAcceleration.velocity * 0.2f, 0f, m_bounceLimit);
         }
         else
         {
