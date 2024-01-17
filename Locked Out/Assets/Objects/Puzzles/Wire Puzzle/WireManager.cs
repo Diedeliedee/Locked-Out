@@ -306,8 +306,8 @@ public class WireManager : Puzzle
                     m_nextWire = _wires[0];
                     return;
                 }
-                //Otherwise, If the first wire is orange, cut the second wire.
-                if (_wires[1].color == WireColor.Red)
+                //Otherwise, If the first wire is red, cut the second wire.
+                if (_wires[0].color == WireColor.Red)
                 {
                     m_nextWire = _wires[1];
                     return;

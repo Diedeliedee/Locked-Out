@@ -66,6 +66,6 @@ public class JoyconRotationTransmitter : IGyroTransmitter
         newOrientation.y = -orientation.z;
         newOrientation.z = orientation.x;
 
-        return newOrientation;
+        return orientation;
     }
 }
