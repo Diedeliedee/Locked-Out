@@ -10,6 +10,7 @@ public class GrabInteractable : HighlightHoverable, IGrabbable
 
     //  Cache:
     private Vector3 m_holdVelocity = default;
+    private Quaternion m_offset = default;
 
     //  Reference:
     private LayerMask m_defaultLayer = default;
@@ -35,6 +36,7 @@ public class GrabInteractable : HighlightHoverable, IGrabbable
     public void OnGrab(Transform _origin)
     {
         gameObject.layer = m_holdLayer;
+        m_offset = Quaternion.Inverse(_origin.rotation) * transform.rotation;
 
         enablePhysicsOnRelease = false;
         m_rigidBody.isKinematic = true;
@@ -52,12 +54,14 @@ public class GrabInteractable : HighlightHoverable, IGrabbable
             Mathf.Infinity,
             _deltaTime);
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, _origin.rotation, _deltaTime / m_smoothenTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, _origin.rotation * m_offset, _deltaTime / m_smoothenTime);
     }
+
     public void OnRelease()
     {
         m_rigidBody.velocity = m_holdVelocity;
         m_holdVelocity = default;
+        m_offset = default;
 
         gameObject.layer = m_defaultLayer;
 
