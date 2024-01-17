@@ -118,12 +118,12 @@ PrefabInstance:
     - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
       propertyPath: m_text
-      value: Serena Spade
+      value: Verena Spade
       objectReference: {fileID: 0}
     - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
       propertyPath: m_fontSize
-      value: 20.65
+      value: 30.15
       objectReference: {fileID: 0}
     - target: {fileID: 7389737174958027554, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
@@ -222,12 +222,12 @@ PrefabInstance:
     - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
       propertyPath: m_text
-      value: Helena Hearts
+      value: Valentine Hearts
       objectReference: {fileID: 0}
     - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
       propertyPath: m_fontSize
-      value: 20.65
+      value: 30.15
       objectReference: {fileID: 0}
     - target: {fileID: 7389737174958027554, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
@@ -316,12 +316,12 @@ PrefabInstance:
     - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
       propertyPath: m_text
-      value: Jerek Diamonds
+      value: Borok Diamonds
       objectReference: {fileID: 0}
     - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
       propertyPath: m_fontSize
-      value: 18.2
+      value: 30.15
       objectReference: {fileID: 0}
     - target: {fileID: 7455366928570675238, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
@@ -425,7 +425,7 @@ PrefabInstance:
     - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
       propertyPath: m_fontSize
-      value: 25.1
+      value: 35.65
       objectReference: {fileID: 0}
     - target: {fileID: 7455366928570675238, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
@@ -504,12 +504,12 @@ PrefabInstance:
     - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
       propertyPath: m_text
-      value: Jackson Clubs
+      value: Backson Clubs
       objectReference: {fileID: 0}
     - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
       propertyPath: m_fontSize
-      value: 20.3
+      value: 30.15
       objectReference: {fileID: 0}
     - target: {fileID: 7455366928570675238, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
@@ -618,12 +618,12 @@ PrefabInstance:
     - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
       propertyPath: m_text
-      value: Conrad Clubs
+      value: Henrad Clubs
       objectReference: {fileID: 0}
     - target: {fileID: 5013095019947293716, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
       propertyPath: m_fontSize
-      value: 21.6
+      value: 30.7
       objectReference: {fileID: 0}
     - target: {fileID: 7389737174958027554, guid: 40185632f4fd63d4798ca74e752aae61,
         type: 3}
