@@ -6,6 +6,7 @@ public class RotationPuzzle : Puzzle
     [Space]
     [SerializeField] private RotationCube m_rotationCube = null;
     [SerializeField] private Transform m_guide = null;
+    [SerializeField] private Transform m_progressBar = null;
 
     private void Start()
     {
@@ -14,6 +15,10 @@ public class RotationPuzzle : Puzzle
 
     private void OnCubeRotated(Quaternion _rotation)
     {
+        var scale = m_progressBar.localScale;
+        scale.z = (Quaternion.Angle(_rotation, m_guide.localRotation) / 180f) * -1 + 1;
+        m_progressBar.localScale = scale;
+
         if (!CompareRotation(_rotation, m_guide.localRotation, rotationTolerance)) return;
 
         m_onSolved.Invoke();
